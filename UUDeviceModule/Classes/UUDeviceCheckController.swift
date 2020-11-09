@@ -246,7 +246,7 @@ public enum networkStatus {
     ///网络检测
     @discardableResult
     func netCheckHandle() -> UUDeviceCheckController {
-        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.uuabc.com", pingConfig: .init(interval: 3, with: 3), delegate: self)
+        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.baidu.com", pingConfig: .init(interval: 2, with: 3), delegate: self)
         return self
     }
     
@@ -350,7 +350,7 @@ extension UUDeviceCheckController{
         backgroudImageView.addSubview(topListView)
         topListView.snp.makeConstraints {
             $0.top.right.left.equalToSuperview()
-            $0.height.equalTo(32*ScreenScale)
+            $0.height.equalTo(32~)
         }
         
         backgroudImageView.addSubview(speakerView)

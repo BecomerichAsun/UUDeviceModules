@@ -47,8 +47,8 @@ class UUDeviceCheckSuccessView: UIView {
         
         backgroundImageView.addSubview(contentImageView)
         contentImageView.snp.makeConstraints { 
-            $0.size.equalTo(CGSize(width: 519~, height: 268*ScreenScale))
-            $0.right.equalToSuperview().offset(-37*ScreenScale)
+            $0.size.equalTo(CGSize(width: 519~, height: 268~))
+            $0.right.equalToSuperview().offset(-37~)
             $0.centerY.equalToSuperview()
         }
         
@@ -62,13 +62,13 @@ class UUDeviceCheckSuccessView: UIView {
         
         resultButton.setTitle("退出设备检测", for: .normal)
         resultButton.setTitleColor(UIColor.color(hexString: "#FFFFFF"), for: .normal)
-        resultButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
+        resultButton.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
         resultButton.addTarget(self, action: #selector(resultButtonAction), for: .touchUpInside)
         contentImageView.addSubview(resultButton)
         resultButton.snp.makeConstraints { 
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(-40)
-            $0.size.equalTo(CGSize(width: 153*ScreenScale, height: 37*ScreenScale))
+            $0.size.equalTo(CGSize(width: 153~, height: 37~))
         }
         
         let iconImage = UIImageView.init(image: uu_image_Bundle(forResource: "uuaitestpass"))
@@ -76,7 +76,7 @@ class UUDeviceCheckSuccessView: UIView {
         iconImage.snp.makeConstraints { 
             $0.centerY.equalTo(contentImageView).offset(40)
             $0.right.equalTo(contentImageView.snp.left).offset(40)
-            $0.size.equalTo(CGSize(width: 273*ScreenScale, height: 283*ScreenScale))
+            $0.size.equalTo(CGSize(width: 273~, height: 283~))
         }
     }
 }

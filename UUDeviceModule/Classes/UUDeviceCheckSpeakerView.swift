@@ -76,8 +76,8 @@ class UUDeviceCheckSpeakerView: UIView {
         self.addSubview(bouncedImageView)
         bouncedImageView.isUserInteractionEnabled = true
         bouncedImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 519*ScreenScale, height: 268*ScreenScale))
-            $0.right.equalToSuperview().offset(-37*ScreenScale)
+            $0.size.equalTo(CGSize(width: 519~, height: 268~))
+            $0.right.equalToSuperview().offset(-37~)
             $0.centerY.equalToSuperview()
         }
         
@@ -91,27 +91,27 @@ class UUDeviceCheckSpeakerView: UIView {
         bouncedImageView.addSubview(aiPlayVioceButton)
         aiPlayVioceButton.snp.makeConstraints {
             $0.left.equalTo(label)
-            $0.top.equalTo(label.snp.bottom).offset((20*ScreenScale))
+            $0.top.equalTo(label.snp.bottom).offset((20~))
         }
         
         bouncedImageView.addSubview(leftButton)
         leftButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview().offset(-93*ScreenScale)
+            $0.centerX.equalToSuperview().offset(-93~)
             $0.bottom.equalToSuperview().offset((-40))
-            $0.size.equalTo(CGSize(width: 153*ScreenScale, height: 37*ScreenScale))
+            $0.size.equalTo(CGSize(width: 153~, height: 37~))
         }
         leftButton.setTitle("听不见", for: .normal)
-        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
+        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
         leftButton.setTitleColor(UIColor.color(hexString: "#36AEFF"), for: .normal)
         
         bouncedImageView.addSubview(rightButton)
         rightButton.snp.makeConstraints {
             $0.bottom.size.centerY.equalTo(leftButton)
-            $0.centerX.equalToSuperview().offset(93*ScreenScale)
+            $0.centerX.equalToSuperview().offset(93~)
         }
         
         rightButton.setTitle("听得见", for: .normal)
-        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
+        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
         rightButton.setTitleColor(UIColor.color(hexString: "#FFFFFF"), for: .normal)
         
         leftButton.addTarget(self, action: #selector(leftButtonAction), for: .touchUpInside)
@@ -131,7 +131,7 @@ class UUDeviceCheckLeftButton: UIButton {
         super.init(frame: frame)
         self.setBackgroundImage(uu_image_Bundle(forResource: "aiTestImage_left"), for: .normal)
         self.setTitleColor(UIColor.color(hexString: "#36AEFF"), for: .normal)
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
     }
     
     required init?(coder: NSCoder) {
@@ -146,7 +146,7 @@ class UUDeviceCheckRightButton: UIButton {
         super.init(frame: frame)
         self.setBackgroundImage(uu_image_Bundle(forResource: "aiTestImage_right"), for: .normal)
         self.setTitleColor(UIColor.color(hexString: "#FFFFFF"), for: .normal)
-        self.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
     }
     
     required init?(coder: NSCoder) {
