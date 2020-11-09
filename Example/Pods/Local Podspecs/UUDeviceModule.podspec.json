@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of UUDeviceModule.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/becomerichios@163.com/UUDeviceModule",
+  "homepage": "https://github.com/BecomerichAsun/UUDeviceModules",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "becomerichios@163.com": "becomerichios@163.com"
   },
   "source": {
-    "git": "https://github.com/becomerichios@163.com/UUDeviceModule.git",
+    "git": "https://github.com/BecomerichAsun/UUDeviceModules.git",
     "tag": "0.1.0"
   },
   "platforms": {
