@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/becomerichios@163.com/UUDeviceModule'
+  s.homepage         = 'https://github.com/BecomerichAsun/UUDeviceModules'
 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'becomerichios@163.com' => 'becomerichios@163.com' }
-  s.source           = { :git => 'https://github.com/becomerichios@163.com/UUDeviceModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/BecomerichAsun/UUDeviceModules.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.swift_version = '5.0'
   s.source_files = 'UUDeviceModule/Classes'
