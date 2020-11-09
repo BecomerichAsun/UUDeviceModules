@@ -19,45 +19,45 @@
 		067099CE158BFE19E12A7FABCE9E21B3 /* mz_strm_zlib.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D010BA7DB6F7B01B3D2E925199BF268 /* mz_strm_zlib.c */; };
 		072677D29E0A22AAF9F95874C9830BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		077E94FE851B9BA41A5E4FBD2EE4CDA3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AE299DAB8735AA8BD5CE5E6E949DED /* Security.framework */; };
-		0AC699BF55BC8E997678D44867F12E1B /* UUDeviceModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9BBEF87D823C1E9C666D96AC9184007 /* UUDeviceModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BAEB5B524128E450E95F265ECAAACB0 /* UUDeviceCheckErrorCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20959F3A414F8242C24314321B7A54 /* UUDeviceCheckErrorCollectionCell.swift */; };
+		0BF93E1A5C11C32F4ACFB54F9F7ED882 /* UUDeviceCheckSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0583A6D03230108D5A6FD4537F35124 /* UUDeviceCheckSuccessView.swift */; };
 		0C30F7DF660932B2173720ADC00226CD /* Type.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2F5571FC8C3369E5AE478311EE1566 /* Type.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0DDA8D15FFB7F8AF13E24655132005A7 /* GPBEmpty.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3C64C44618815F829A91063848809D /* GPBEmpty.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0E66F2009DFEBA2A0E890474589E1FA9 /* GPBCodedInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = C4811932CD156BEFA1CB488FA38037F2 /* GPBCodedInputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EF61EC945DB35CC8C632FB1C5A7EC55 /* UUDeviceModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EA32B54A17C67F9168FF3FD36DB75F /* UUDeviceModule-dummy.m */; };
 		1007A1CCC04EAADCAC26A9D3198EEC8F /* SVGAVideoSpriteEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 37CDE7BF730E89D53D671550FD7CE841 /* SVGAVideoSpriteEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10AEF8D60AF1F40B5907A8552C63BB1C /* SVGAExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6EB0058EE2EB5D9724593FB129FF9C /* SVGAExporter.m */; };
-		13CF65A6B89CB08C824E79004F93AB0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		169389261CF27C7072F3D8C0F13C2BDF /* SVGAParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D68CD697CF7B2C9F7B0F991CD8844A /* SVGAParser.m */; };
 		18BE2A6F636BDECFC89BCD66E4E59DE7 /* SVGA.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DCE9FC2FD536504C96922C716BB01B9 /* SVGA.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1956E392D500F3CD899D39A5F805736D /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211C9DC96B17C2E2614B838698334D57 /* Typealiases.swift */; };
+		1ADC01056055B15ECA5BA84169F3C293 /* UUDeviceModule-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91AFCE9B49A9816E37ED4A27F6B70163 /* UUDeviceModule-dummy.m */; };
 		1AFB1E9136716C0B61D6C700FF1E60FD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F41ADF46FA074CD367983ED117FA99 /* ConstraintLayoutGuide+Extensions.swift */; };
 		1C3D4974B1CD96E2B7FB65EB764F9AEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		1E039DFD67F2655D9F3772953CEF467B /* Api.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C5F0BB0D17A24513CFA7885376E96D0 /* Api.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E19AF00E8754832A8A89C67190AD964 /* UUCheckSources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 70C9AEF3976A57BE3FF5E5E5B626A9BC /* UUCheckSources.bundle */; };
 		1E8262F1B4BC801692E5E0C20D1E2E1E /* SVGAPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 794FD4DDE5B18C9220F663D06EDEE3A9 /* SVGAPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21AB1101BBE4D28D74ED4EDF0D59025A /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34DECB2E441D69074300F4F9FB4B60C /* ConstraintInsets.swift */; };
+		227992B1CF413F0F2C53B314D2DACD26 /* UUDeviceAudioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32A6BBEADAB766DAA7AD2D9285A5818 /* UUDeviceAudioTool.swift */; };
 		232B2F922E972D9F43D2EE15ACECE734 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFC6E4E0119909933D258359C31DE6D /* ConstraintPriority.swift */; };
 		24EA1859372201871C6E5FDFEDE9FF80 /* Timestamp.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C6966A6138BFF59435E7E1021F7B1A3 /* Timestamp.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25D0CDCA921A1027CE242BE7C15B1F1E /* UUDeviceCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D698299774E10138305A87D3EB9578 /* UUDeviceCheckController.swift */; };
+		253929FB02C1337BAB6F4E453F57CD40 /* UUDeviceModule-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 956D4A83A87752FA6A4D57B66A9BBA9F /* UUDeviceModule-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		266BAE4CAE69DBE229DC07807BBC8CCC /* SVGAPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 295DA22538EB76B6CED5ADD67C9A3B92 /* SVGAPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		272288643C7156FB3F6B48C5A6A46199 /* GPBDuration.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F8D959D80D362FFF6D55BBF2DE3778 /* GPBDuration.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		272D6901D65990818FB6355D21F6EFF1 /* mz_strm_split.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0C42020D4BC5AAB64B30D50363E2E7 /* mz_strm_split.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		28CD62EFF97A1D169E5BDABFB14BFA7D /* mz_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 87E50135579970863E4CBB35DD0EE011 /* mz_os_posix.c */; };
 		2A1BBBC87AC2367BD14610A9D10D285E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BBA136C2D79E1FCE2045215C7B6AEA /* ConstraintAttributes.swift */; };
-		2A23212A3388DCD3C43D3D2599B85080 /* UUCheckSources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBD9558388F26100E3F8AB56312144D0 /* UUCheckSources.bundle */; };
 		2A73E1818E94EFF5388A6F2E28A41EF1 /* mz_crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C3497AF6514820D75E37E9B34CBDF1A /* mz_crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2C06F2E972444D359754D21AC46BFFE2 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6BDCDA66FC1CA908C8AEB4FC376CD1 /* ConstraintInsetTarget.swift */; };
 		2C1486135D08151CBE1BE2D2833FA002 /* GPBType.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A9118480F71050AB28770D5110B24B /* GPBType.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C6535589E2F8F80158AFE16E26C8299 /* Protobuf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF09A6F92B0A3480F0D7420A66EE8CAA /* Protobuf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F8BA5953C5F3F1F5B77BBA2E9FF31BB /* UUSvgaAnimationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536FF3A64B34741D14DAB08CDCB4A94 /* UUSvgaAnimationCenter.swift */; };
 		2FA730DC9B14848F762142D301A9B765 /* SVGAVideoEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = C025257B82BB238942E6833F2E1C4F62 /* SVGAVideoEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		305298ECC6840C2665620A898AC25954 /* UUDeviceCheckVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EE4E16912DCF74054A748AAE5F5B5A /* UUDeviceCheckVideoView.swift */; };
+		30196C14E51C0690520678036C3482C3 /* UUDeviceAuthorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3889FB48BB01727F1967A66DAB097A9F /* UUDeviceAuthorManager.swift */; };
 		31861E4BCFF3885DC2BF3D2163DFE2C5 /* GPBUtilities_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = F82AC2AB4CF3DD44754A458815257411 /* GPBUtilities_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		321ADE5C315DDC9A3B15DE2E8249E84B /* mz_zip_rw.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB79AF4494478C58BC5200C6C7C65A7 /* mz_zip_rw.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		323183FDC3268EE493270DD54CC5E8BF /* SVGAImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = E23521A41FAEA79DBCFED7CA9B9B3AB2 /* SVGAImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		347596BD4FF965354B2DBEE47F9AA00B /* GPBWellKnownTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3365968C21769A151B6F8D175018BC70 /* GPBWellKnownTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		360D796CD92C5721ABDBC4A92087C24B /* UUMacroFle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0257534C9736E58E61B9C3C655419B /* UUMacroFle.swift */; };
 		36BB97B405CCADF63DC32974D9F918C4 /* Svga.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 57E460767E5F2D8529689E623F7EB541 /* Svga.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37256E0DC08C56125A622B4D3210CF4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
-		38A742AC4183A16E8D4F02841DAC6484 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC66460FB371F22D0FE6732D99790584 /* AVFoundation.framework */; };
 		395DCF0017962406D3ED93FA28297025 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC66460FB371F22D0FE6732D99790584 /* AVFoundation.framework */; };
 		39BBCA43CBAF07E56D958E3C65B8C026 /* GPBCodedInputStream_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 696CD4D76A7D9DCE49B483D872D9A831 /* GPBCodedInputStream_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3ADC43BD375F6F7B53AFA29E2D112FD1 /* Pods-UUDeviceModule_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB95805D9820DCACC115CDDDBA359068 /* Pods-UUDeviceModule_Example-dummy.m */; };
@@ -65,30 +65,34 @@
 		3E5285F4F36EAD77ECABBFB7F36BB1BB /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BDE2B404900C7CCA1011C0FA002B18 /* ConstraintView+Extensions.swift */; };
 		3F09A495285CA1E0431231976E9A0E5D /* SVGAPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F92DA0F95895255F2BA3A529D025FF0 /* SVGAPlayer.m */; };
 		3FA152C974259118757130733C889DDF /* SVGAAudioEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A253EAB9CA74A731306466569B21F /* SVGAAudioEntity.m */; };
+		423E8A20F9D4C7AFAE5FF5435888464D /* UUDeviceVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D70E52483764C6BB7F9E197C97293EB /* UUDeviceVideoView.swift */; };
 		43C001B8205D627442EE0260752E19BD /* mz_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 35A42F9E75989C3AA792EB03CE3D551D /* mz_compat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		43E5F0B24149C126611F43B1B7B8F376 /* UUDeviceCheckResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C6022013449F31A0478F4498D01AD2 /* UUDeviceCheckResultModel.swift */; };
 		43E91C7F3DCE2D657D30F4B928507F1C /* mz_strm_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 142E81E07823538FB02D916973E057FC /* mz_strm_os.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		43FB262A6D9AE893651B10CC8469FA40 /* GPBTimestamp.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA6F58B87B7B3E110635673BB6A388E /* GPBTimestamp.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		478EAFEFB54FDB6F442D2F20AECA34F0 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AADABE4A06C8DF604B8F40AC147E79B /* SwiftyPing.swift */; };
 		49ABD24EEACB33496A854F66257C751D /* GPBUnknownField_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ECC64E5A3CC11BCB939F4814AC0200 /* GPBUnknownField_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C7A676DAE95EEAC3787A75349F0862D /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B043917F880B331370902E12909460C7 /* SnapKit-dummy.m */; };
+		4D163D9AB6590AFDFA12E26040C44173 /* UUDeviceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403E56C219EBF4D24ADFC2C26E07103C /* UUDeviceRecord.swift */; };
 		4ED275767F95CC59BB73B6C5E521BBB9 /* mz_strm_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = D5CF0E00EE6014E6A0A5EA9E93111CF7 /* mz_strm_buf.c */; };
 		51CD5887014967E77E58F5A163996454 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0593A51C2007CDB5921011C0215C4DD /* ConstraintMaker.swift */; };
 		54EA677996BEF5B82ACF71CEF9B89D0A /* GPBSourceContext.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 72407F3F5C7C3DD4D350873AD019BF9E /* GPBSourceContext.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5765A7E48427B79917D1483263A88AF0 /* SVGAVideoSpriteEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9ABC457466AE3289A0709D107111F /* SVGAVideoSpriteEntity.m */; };
 		57B1876F2BE4168E5BFDB63D8CC849A0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FACD51B67C8FF459A9F335E743DA910 /* ConstraintLayoutSupport.swift */; };
-		581C7452B3D85BA0B812E7ACECE4FF1D /* UUDeviceCheckTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE5A583A450ED83C0A343238C63FC22 /* UUDeviceCheckTopView.swift */; };
 		5854DF509E8A016B6235793D04083035 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A9C03507262F8876868C7F92E832A1 /* ConstraintConstantTarget.swift */; };
 		5A0FA801C568B89957D7D67293786195 /* GPBCodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = BA604E86067E40FA115975E626A2F567 /* GPBCodedOutputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5B4E9B9ECB73028C59E045031A2BCF16 /* GPBRootObject_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E81AE9D3E0091226A0F0CBDDAAF8E7F1 /* GPBRootObject_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D484BBC5FD98BCD921F3FCE781E05B4 /* GPBUnknownField.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E423E54FD45338E3F90B4B1A834FC1 /* GPBUnknownField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DD414248CCDDEAC80FE4CFD480F4568 /* GPBSourceContext.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A572BB19A0732A235CC30367DA2D7D /* GPBSourceContext.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5E065C4F2CCFA6288166EA57CEEB8D51 /* UUDeviceCheckErrorCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A275F44845B795338FCE7D44D76E321 /* UUDeviceCheckErrorCollectionCell.swift */; };
 		5E6F7591E81B11D9C7C419340BDBB1C9 /* mz_strm_wzaes.h in Headers */ = {isa = PBXBuildFile; fileRef = 667276CA3C6D81675A8C369EFCEC77E9 /* mz_strm_wzaes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5F82C9B020A2E46D45D85BF5A3357464 /* GPBApi.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C409AFD182D07B54DCD83B2D75B95E6 /* GPBApi.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5FE98ACDF04EA13C7A510D4BFE1EF9A8 /* GPBCodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 116214269BD4A8A46B87693CB8F93BE3 /* GPBCodedInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6057F931B4676A892E5E7CC68733FC79 /* GPBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D3EEB0549E774DF2B4C02A6B83199155 /* GPBArray.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		60BED4BBE0E28EE5BB022D1F38783870 /* SVGAVectorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E8190C5E66D0811F4AA35CDCE8A347 /* SVGAVectorLayer.m */; };
 		617EAE48543956E45C3168E9AA20EF19 /* Struct.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = C527B964BB0AE74181EFB9328A61CB27 /* Struct.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61CC45427299BD8CCE60FADDCDDE6818 /* UUDeviceCheckTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227A9406A226D96370CC1B203E67E885 /* UUDeviceCheckTopView.swift */; };
 		64668F959B99797DDB5B88E5614C421D /* GPBDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A580FD59410FDEB8EE74D7D851490582 /* GPBDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6560B26C186155E8BC39820223AFD88C /* UUDeviceNetworkPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4FD1F47AECB52795D9F77E4152685A /* UUDeviceNetworkPing.swift */; };
 		65791C0B4659B86D3A4E5DCFAFA2844E /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2EEA76C960FF8AF723740F41B27549 /* SSZipArchive.m */; };
 		65BA05C7F3556D09D71F0A35DF58181F /* mz_crypt_apple.c in Sources */ = {isa = PBXBuildFile; fileRef = 97173AE352508F59816CA18C739076E5 /* mz_crypt_apple.c */; };
 		66E0C5BE272FCF3CB5F2562E78884915 /* GPBMessage_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 836D2F5F4D9C73DE37921B1038AB0DF1 /* GPBMessage_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -96,29 +100,29 @@
 		6943F6FC4C73760E0AD7F7A67AF1BC23 /* mz_strm.c in Sources */ = {isa = PBXBuildFile; fileRef = A3D16864FBE58A33E86B654B51F9C560 /* mz_strm.c */; };
 		69CCBEEDFCA6D743D80026568D961919 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4024820155391DA46E913D5B0A5877 /* ConstraintMakerExtendable.swift */; };
 		69E3A06BBDFDC7D06A9D4BDC4E895E73 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA526C37845CF759A202B2D3512B4EC /* ConstraintRelatableTarget.swift */; };
+		6B744EF7AE218BB1148E9D384DB73C00 /* UUDeviceinsertErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A83BA75A5C5DAE86F3679BD613DBE35 /* UUDeviceinsertErrorView.swift */; };
 		6BD5F9DAC4B5A48AC277A404989D498F /* mz_os.c in Sources */ = {isa = PBXBuildFile; fileRef = 23462DB22A1E2B1F5540E36761615C35 /* mz_os.c */; };
 		6C2428EB9E7A3FBB32CECD9BA18D8AF3 /* GPBUnknownFieldSet_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 338DD7CD4A84D7F5A6FF94751D6E634C /* GPBUnknownFieldSet_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C6E3356CE687B3EAA9D9951829F8FCD /* UUDeviceAuthorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD83003FEC3CCAF90C1700DFBDF2A0CC /* UUDeviceAuthorManager.swift */; };
 		6E0EB9E7FAAEDBB7A73ECF3095F69C4A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5948235E5C29A87890C9AF910984F89 /* UILayoutSupport+Extensions.swift */; };
 		6EB507548670304BC949EE9563006761 /* GPBTimestamp.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 2963A297F2C83C6B3AA54BCC1F1C200A /* GPBTimestamp.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		716F468AF6D75081E9EFAA3A6CB59D46 /* GPBMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54377E46AFA440691DE8F3D7B2ED6612 /* GPBMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		71DE9DC2FA583526AB4D1FD7F00C099C /* ConstraintDirectionalInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3461811C1D4F3E28BD031D53822A4 /* ConstraintDirectionalInsetTarget.swift */; };
+		723F526877E963A1751BC0032673EC79 /* UUMacroFle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F77CB55E1D7C87FD41932EC3CBA97 /* UUMacroFle.swift */; };
 		75E146C12D1287228A0B493E87CDE31F /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46B0D4D1B895CC5319524CDCFA600C5 /* ConstraintMakerRelatable.swift */; };
 		7690F167CAF7628E4385F68C6B9CDF8A /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 046A5149EA0F7DBFA882CC1202BDFBD2 /* mz_compat.c */; };
 		77495FAB4DB9B77C18A04F3BD8B42731 /* mz.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F641E3BB6345722B56CEE45A27DB64E /* mz.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		77C9889055A3B32EA13A9616824DB0ED /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E748FB2FADCEC393DFFF0CF640F798 /* ConstraintLayoutGuideDSL.swift */; };
 		7A83EAB86CE0CA85B5EC5032FBAB6A80 /* GPBWellKnownTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 83707F975D1FA2944DCF7EF903D98BEA /* GPBWellKnownTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C1702076F3A31D8D2D45A4A9F09B266 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FF6091EAA9B0DE454FF1866C5416AD /* ConstraintMakerEditable.swift */; };
-		7CAB2D620F0A62E390E15C5A601BFD0C /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6343EB5FF7BCBAC2186A00825F0AA5 /* SnapKit.framework */; };
 		7CEDDF7557200A551E83DA87436A3C31 /* GPBDictionary_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3508121995A1C770C5F000F1D5E68125 /* GPBDictionary_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E2517E26C50F69DD26ACAA6F12A7532 /* UUDeviceCheckColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF35821EDF96216E4B2F6FD143D53D0E /* UUDeviceCheckColorTool.swift */; };
 		7E47473814623F77D7862287A9DA7A51 /* GPBDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = DE00AE2C32010786F462E6801533C2B5 /* GPBDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F3031B74AB69840A6B78483F2AA8D0E /* mz_strm_pkcrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 76A84034D4C8D38E5FAA102F604E328A /* mz_strm_pkcrypt.c */; };
 		826390072AAF9E1AD0607A55BFA93B39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		8274FFC7C151B730974F6D66ED93434F /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15049A00F155BD4D0DABA85B0924AF7F /* Protobuf.framework */; };
 		8277256ADEC3C4DCF79957D1CA681A9A /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61525FD6FCFA407C1EFDFCD35BBD8BDE /* ConstraintDSL.swift */; };
-		82C8D312308BC5CEECB5B702D612C8D0 /* UUDeviceCheckResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603D744C4FE818B764114FDC9FF52659 /* UUDeviceCheckResultModel.swift */; };
 		830535ED707DC8D1703BF90E54C704DA /* mz_strm_pkcrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC3BEDC55752CE4456D0EDB06004D6E /* mz_strm_pkcrypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		845CC4A668F07D2195FC772FF3EE772F /* UUDeviceCheckMaicphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414E39DBD22E893D5E2332B852B5150 /* UUDeviceCheckMaicphoneView.swift */; };
+		84D7E914EB01C8736355DC94FB0A20DD /* SwiftFitSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0320961A1AED3F41D8CD833FEE24F6 /* SwiftFitSize.swift */; };
 		85F72BE75A2CBA5C9737514274971262 /* SVGAVideoSpriteFrameEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 888533DBF173314BED08C8091C648A90 /* SVGAVideoSpriteFrameEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		86212605E37B32775ED9C826B81A78AA /* GPBDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EE24C570DF7C1E8837F64385CA6FF2 /* GPBDescriptor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8651ACD6B03A5F53B09BAD4D761E4CA4 /* SVGAExporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FE64392A2CFF0007A6713C04D057475 /* SVGAExporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,24 +132,25 @@
 		8A732CC522410B9DEE9DC0BA42728412 /* GPBApi.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = F20CE8C035BC1C54C88B2C96E296474C /* GPBApi.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B0C4800707F9B5FBF9B51351328D6A9 /* GPBDescriptor_PackagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF08EBBEE0EA24DEFC5023E1BC56E702 /* GPBDescriptor_PackagePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C1C212C7C8E1E3BCCE45082A22D6FE0 /* SVGA.m in Sources */ = {isa = PBXBuildFile; fileRef = 43984F5EAF07E9B2A936D90CF3ABABE7 /* SVGA.m */; };
-		8CA3531885332A40E3B0FC0153DC8E5A /* UUDeviceCheckFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D7FD1FF6A8107D56837A9E1B70F1D6 /* UUDeviceCheckFailView.swift */; };
 		8CD45B93BEC280F6CEF236EF43BE0671 /* GPBAny.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1761498D166525337EF0F02D521C9D /* GPBAny.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8E0AB4EC526D392ECFBEFE98CA32DC38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		8E29C090402F60D6FFD4A2C34639E54A /* SSZipArchive-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A7AA057DC407B52406FA8A7CBC5B0DE /* SSZipArchive-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EDBFE2CC4B922BD73B9A5CC418FC041 /* GPBStruct.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 180AE6D597111B83281DAFE208227F0F /* GPBStruct.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F4806B6A312BCA27E098BC88B128319 /* GPBWrappers.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CECF89324A69FA3DCA667239AE6DE88 /* GPBWrappers.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9000803B131E007D981B280FF00A11CA /* mz_zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4814EE5A1B9A3253F9C1596544EAADE2 /* mz_zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		907BFB1044860A9A0AD3C7322D28D881 /* UUDeviceCheckSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516EDD1B98B4E060C73193B727DF7C26 /* UUDeviceCheckSpeakerView.swift */; };
 		927B748D8BF4D12F6A45CC2B152F8043 /* GPBExtensionInternals.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BF3842BEF735C2010C1E239E589D3E /* GPBExtensionInternals.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9289499FA543C01E6C8151C471007902 /* SVGAContentLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 55B369AC0F94A3FE0312748AE464F686 /* SVGAContentLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93126A9A19E909A216AA60E9E2F482C5 /* FieldMask.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 91688598E0BF7DDD948884E2E966AE3C /* FieldMask.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93A71A47F289CFFF8209DB1D32CF6A71 /* GPBProtocolBuffers.h in Headers */ = {isa = PBXBuildFile; fileRef = 256170990C4EA1AAB12FFE5699C29D42 /* GPBProtocolBuffers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96632040EFB89D4092B39E505E564F0E /* Duration.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B3611CFD863C80FEC64D6CF1E022D76 /* Duration.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		980345762855CB4C2793307A474F66FA /* UUDeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E7F63A13D9B5304DEF960BB197664A /* UUDeviceConfig.swift */; };
 		980391CFF8DA3CEF33DAAB5FA0798C4B /* SVGAVideoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9A5F266AA2FBF744371DD860971797 /* SVGAVideoEntity.m */; };
 		99B5296A5EDECE0557B9DA53D9E19CA1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1953B517C098E0B3B95A867D8A2FCB7E /* ConstraintItem.swift */; };
+		9ADFC3AA981B6FFB04D124303C847173 /* UUDeviceCheckSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A1BFB071FD8CEB111B6877ABECDAB /* UUDeviceCheckSpeakerView.swift */; };
 		9B09968922C73D50040C6EEF57890D6E /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B46F791926699D5A1E7CE090CCBA35 /* ConstraintConfig.swift */; };
+		9B65E1F8C0F7799565569D43C6B749C7 /* UUNetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60313C57432B5C4E1F6EBB2A33A990BF /* UUNetworkReachabilityManager.swift */; };
 		9C018A6C8725FAE2882B23C5BDE94A5F /* GPBAny.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C95AEB51AE0D90548B1D7614270F87 /* GPBAny.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C02F7D87AC906AAFA101FAE023899C2 /* UUDeviceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2C73A0BA60547DBEC27A5A4BCCCC4 /* UUDeviceRecord.swift */; };
+		9CBADC00DC24E5310E0B0677B4C1D473 /* UUDeviceCheckBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882D4817A32A48272421BAD4E5D01E0 /* UUDeviceCheckBottomView.swift */; };
 		9CED5547B03E1A309A14F49EB38A1241 /* SVGAContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA24E40682C91697B2A13F563CFC14C3 /* SVGAContentLayer.m */; };
 		9D4B152E545CE3C55ACF33343EE8F138 /* GPBRuntimeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBF637CD879FBE03FF400F5F39DF169 /* GPBRuntimeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A03118030C160E17A6D37A8147024888 /* GPBUnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0D2F54566C5372ABAC79B7D6407FD /* GPBUnknownFieldSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -153,18 +158,16 @@
 		A270CD9EC3C541FE86E65AEDCEF500CF /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2B005907AB11DFEAB8085260BF87C9 /* ConstraintLayoutGuide.swift */; };
 		A30D8D7DAC2689A65681D8AE0A0F26EA /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 521A93531D92A3709212990DB27E085A /* SSZipCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A48EA4E1334D711A012313A81F78E272 /* GPBUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = BFC7E6EE9A4FCE6726A100F5ECBEA7D9 /* GPBUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4E5D0C5893F406E54369D1BFE3D1C1E /* UUDeviceCheckAiPlayVioceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3216B07D6D5FB9853D84B7BB6B94AA /* UUDeviceCheckAiPlayVioceButton.swift */; };
 		A5F7EA052FEFA6C1CD403E4943E330A5 /* GPBWireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B37F65258AC701C56311C489A0556DF /* GPBWireFormat.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A087A6B2037D802D078A5B8A51B39C1B /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A68B4BEB2D8CB7EBDBE4BD90789453B0 /* GPBFieldMask.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = E1DA939B1343E2248E6C2A62B06267D6 /* GPBFieldMask.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A80D4B906EE293F1F70D319A375180E9 /* UUDeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C97B9F3529B9AE2F20909B709E84AA0 /* UUDeviceConfig.swift */; };
 		A8686E753353189CF121E737C2921762 /* Pods-UUDeviceModule_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B8A60B37794C7798DCFB7F38C75ED9D /* Pods-UUDeviceModule_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9C4AC9BC9AF923FBA7AB5F82058FE5C /* GPBType.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFA13064EF64B983B5575FE4F887D14 /* GPBType.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A9DACF3D63AE46A3A9F7A6D2BE323448 /* GPBCodedOutputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = DC8D9A9A626E38AF79C01D6970369AD0 /* GPBCodedOutputStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB29ACCFDF11BA32173855A8E70AC8A2 /* SVGAAudioLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DDFB6F93F519FE1075FD286DC6BE4E5 /* SVGAAudioLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC35C9341C4BB156BB26FDD237EE3721 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929823AB3BA93675931F0DA31CF811FB /* ConstraintDirectionalInsets.swift */; };
 		ACC24AF5163C5D7C32954BB70F3291F5 /* SVGAVideoSpriteFrameEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C0AC3FDE1CB474382C065BA8BE50B3 /* SVGAVideoSpriteFrameEntity.m */; };
-		ACD4FE04E2AF66D5496FFE2A9E98BCDE /* UUDeviceVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DF1E9CB920AF1F136D1AD629D30DE6 /* UUDeviceVideoView.swift */; };
+		AF67EE9C8099FDFCD78940DE77DA7C1F /* UUDeviceCheckAiPlayVioceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1221DD2E561C156B0262F7FF4B8CD4DB /* UUDeviceCheckAiPlayVioceButton.swift */; };
 		B29BAD3600F07CE913F2884D50E12FCB /* GPBExtensionInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DF5FFDB11C5B925753461B3D299525 /* GPBExtensionInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B534372DEFE8419792ECE0C6386F1D10 /* GPBExtensionRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E42579EA11A10F1F7A2549B48B2AE71 /* GPBExtensionRegistry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B56CD8CBF99C38F638B738FD2FC21A6D /* mz_strm_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = B314B3D666504B072EA612F653076322 /* mz_strm_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -175,7 +178,9 @@
 		B841A96229FF83E3EA11EB76F09A3E5C /* SVGAVectorLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A0C68B57F379E7500BD4706858C2CCD /* SVGAVectorLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B906236FA3F76307F357D1FB20CC5314 /* GPBEmpty.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D938FE14D03FA9D51C288DEF81C2171 /* GPBEmpty.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBF9BFFEE3A25F3E232117971C316752 /* Pods-UUDeviceModule_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D0C41A039D9501616880EA7CEAC27E /* Pods-UUDeviceModule_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD4C90DC724CBA0FFB50715F917301C6 /* SVGAPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C915EBF734A5CFBEFA26A03E0780F62 /* SVGAPlayer.framework */; };
 		BD512AFB1ED89AD68B4CBBCF5B049FC3 /* GPBRootObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 710DDFA172F495896258E5C707FB073B /* GPBRootObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD7242A3EF444F587C4DE20D2A3AE4CE /* UUDeviceCheckController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C99CDA100920017DA46CD5F7FCFEEE /* UUDeviceCheckController.swift */; };
 		BEB5CE7852AEB111B6CF2832B4DF9E33 /* mz_strm_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = 289B9C1EDB34665B0D06F3F652F9B22B /* mz_strm_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BECA67DFB5E0984DFAEFCB775C31972E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033DAF57D4086C18326C791629C954F /* ConstraintView.swift */; };
 		BF07E309C08CB2FFB120131A44E19306 /* GPBWrappers.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C36E1965D0B24C682103C2E9AC90EE /* GPBWrappers.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -183,21 +188,23 @@
 		C03193D3CD8F2EF7DEF608CB6D505965 /* GPBMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CDAA89894611ADB8B35EEE0BCB4B8BC /* GPBMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1A01DC1440862DBC8173B9F49174B30 /* GPBWireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 44725BBDFBA4804A0BC4D3EDCE117312 /* GPBWireFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C27212572DC8B75070881C946C81D3D5 /* Protobuf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3E7B4AE4D58CDC352329418945B783 /* Protobuf-dummy.m */; };
-		C373C9F97F23CA87C83296C69F4EF5F8 /* UUDeviceNetworkPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F6B1236C4F9D45CBE8A96225342A90 /* UUDeviceNetworkPing.swift */; };
 		C412F27D75AFC0DF0F0289DBB270931C /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DBA774EC1B139CCD8755E4D0DB188E /* ConstraintMakerFinalizable.swift */; };
 		C57878DCE4A4B0233467A26CFAF0AF2A /* GPBExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 352BA4DD3E116BCC0ECABE3AD5BE7F93 /* GPBExtensionRegistry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C831E39D3DC68A990F0516595C607E94 /* GPBBootstrap.h in Headers */ = {isa = PBXBuildFile; fileRef = 723F030DADAC0DDE0C8E0657682F75D3 /* GPBBootstrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8A8859C6EF4F00EBD3EB3EB0C0BE231 /* SVGAParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3637BA405BFA79588E59EA50A118E018 /* SVGAParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8C37C16804BDFC0D58F7865E11D38AB /* SVGAPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C915EBF734A5CFBEFA26A03E0780F62 /* SVGAPlayer.framework */; };
 		C9BA3E6B2DE86C0820B213F9ED97B22D /* GPBUnknownField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8050B0387A505B173AF3DE0D2DBF65 /* GPBUnknownField.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CB348EF26B3AAEFD084E41FCF0C8C3BC /* mz_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = C0700270705ABF449D8659287D9C2FA3 /* mz_crypt.c */; };
+		CD0A6C2DA8EFDEEC7011750069761AD2 /* UUDeviceCheckVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E10CD13BBAD8F957F07AACBA3114888 /* UUDeviceCheckVideoView.swift */; };
+		CE56939EE4DE5306FA4FFB92790DAEAB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6343EB5FF7BCBAC2186A00825F0AA5 /* SnapKit.framework */; };
 		CE62FEABA57B2B53EABF8C7DCCC6B2C4 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113BFFE4B082BF19F2B63BDF1461FB4F /* ConstraintRelation.swift */; };
+		CF3A270172F149910F8504AED7C07C76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCEC491E490FE2839554F3A2479FD20 /* Foundation.framework */; };
 		D050D4729C95934CCD2918DB00225B11 /* GPBUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D393C4310638A1C59941E166747C055A /* GPBUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D05B2C9CBF59964953ECC39E21720B65 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A271E94B1DB6552265FC13628D43BC /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D067FA20DF0589746641B2017793884A /* UUDeviceCheckMaicphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CB87E787082B6A6A9E4AFF6E074C60 /* UUDeviceCheckMaicphoneView.swift */; };
 		D0E3CE122D1571F06F92345B76FDF546 /* Pods-UUDeviceModule_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1115B2A6EE936FF9E7F0769B31BEE48 /* Pods-UUDeviceModule_Tests-dummy.m */; };
 		D4697DC40F3B059E4A0867838CA1814E /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9A60B3A3EF3D2EFFC50DC4E07C8E90 /* ConstraintMultiplierTarget.swift */; };
-		D4E71368C5F4FFC3BD1F5BB95E9065B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA50153501D63FEB077B3B17CB0913A /* UIKit.framework */; };
 		D726B79B5EE4B987291CCB11D42088EE /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 1914F6B578210A03B2DAAF094FA9B0EC /* mz_zip_rw.c */; };
+		D93B4C41D4FDA6C81F8E6BAE9F7EA773 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA50153501D63FEB077B3B17CB0913A /* UIKit.framework */; };
 		D958E35CCBA18751EE8EE4D68D6E914A /* SourceContext.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D1C8F243B42FC3566D9D577A08DB4B /* SourceContext.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA764B6911D6569B076410213C98FD17 /* mz_strm_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = D71A09FDD97B478319D68488BE98B713 /* mz_strm_mem.c */; };
 		DD0D4D10106F1BBE5D9EA831B05C7B7C /* Svga.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = FC67E6B1CD9885544BA0CBC99EDC273B /* Svga.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -206,8 +213,8 @@
 		DFFFFFE5CED781F83E203D17C445D837 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D52145267810EF500D0661654587426C /* SSZipArchive.framework */; };
 		E00CEE5D80126DB104DC5ADBD55892CC /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = A5FB1E78E86351A80D6C2D520B2CE418 /* mz_strm_split.c */; };
 		E1115161276DE6DD0DC57EF57302750E /* GPBFieldMask.pbobjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 37498677A850760B994BD8DF8B28F1DD /* GPBFieldMask.pbobjc.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E16BB22B6DC11156AC810A76D0C297A2 /* UUDeviceCheckFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3A48CC34F195D7534535E906009855 /* UUDeviceCheckFailView.swift */; };
 		E36F0A4261D1277F29437F4C6B517689 /* GPBRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 307331B8CC8A5F21DCE40BCFED67420B /* GPBRootObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E38174515F4F6863CCAB366BE3E477D6 /* UUSvgaAnimationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCCD68EF023E44DF724818F0B36FEDD /* UUSvgaAnimationCenter.swift */; };
 		E513588A4E35F7F5D2859922AFB08436 /* Any.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 292700792BCC1AAEAEE4B8BEFB913343 /* Any.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7CBE61FCC27252BA59F8A054F61E9A5 /* SVGAPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62EB644AFD8916498D8E906E38A36838 /* SVGAPlayer-dummy.m */; };
 		E8F2429683B3015CBD39CE883770BCA7 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A10B8C65E40F8A96FA57C53E368ADA /* ConstraintPriorityTarget.swift */; };
@@ -215,36 +222,32 @@
 		EB1726F5E0D0EEBA20E4528B1E37A8FA /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA02A10667EC40B446B58B2A083AFFB /* ConstraintViewDSL.swift */; };
 		EB61B78A94FD33B794A78E107A22434E /* Wrappers.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = DBC7D4FA8F9D1559362B4EAB9DCA17C8 /* Wrappers.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ECF21CE2088B4A542A445F29BA339508 /* mz_strm_wzaes.c in Sources */ = {isa = PBXBuildFile; fileRef = B06AE989222EABDF499C710EC5C18425 /* mz_strm_wzaes.c */; };
-		ED2C5F093B65A5FC81A1FC04D221A2C7 /* SwiftyPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5265BAFE6C8D2EDA1AF99CCB73E91F /* SwiftyPing.swift */; };
 		ED5D25AC9D688B9492A7F107FC7363C6 /* GPBUnknownFieldSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 912E914506ADEE58AB5ADCE12163E235 /* GPBUnknownFieldSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE909C7C786140109051BC9562EEC7C8 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7AB8C6177CB218D2D0FD01FAA6955B /* ConstraintMakerPriortizable.swift */; };
 		F384CE80A1D76047EA738C6E76EE5D21 /* GPBDuration.pbobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = BDDB6B0ADEA3F4C067209D3B34085B15 /* GPBDuration.pbobjc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3906F7E8B2295A57746268F9E3FDE09 /* SVGAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A1132F71DE003F80220F68C4A58E45 /* SVGAImageView.m */; };
 		F4CFFD9EE69DE275E19FEB216036EB91 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 188FB233C9DD1F0CB2186DFB97D16EA8 /* ZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F960D647E938400CC35B0D911A103EC7 /* UUDeviceAudioTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49A942BA73B5C194F4074FD36E99032 /* UUDeviceAudioTool.swift */; };
-		FA5E91425639D029A3FA94D1C8A8282A /* UUDeviceCheckSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6D58C26F548E014BD3C37D6E98EF98 /* UUDeviceCheckSuccessView.swift */; };
 		FA7C5D46D3BD05E3326646F54395AD6E /* mz_strm_zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = C5664EB23843A518A8F54431EFE3B193 /* mz_strm_zlib.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FC690774057BCFA0636666E48F30F9E6 /* GPBDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 995C3FD2FF5374C7003793A624501C94 /* GPBDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FC979E33FEA519CB99934E1C9D88C33E /* mz_strm_os_posix.c in Sources */ = {isa = PBXBuildFile; fileRef = B8A759730BD60323E9E21E9418582053 /* mz_strm_os_posix.c */; };
 		FCE6243AB9A31CB8688319B9EE0B0AC4 /* SVGABitmapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE6FDCB523C93053B374A7D8FB78081 /* SVGABitmapLayer.m */; };
-		FCE872FA96B91B59C2DD8AEABC639CC6 /* UUDeviceCheckBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A812A418D36199E8D66C0F28BEFA7B /* UUDeviceCheckBottomView.swift */; };
-		FDD6C5CECE90876B4E1BFF707EFAA75F /* UUDeviceCheckColorTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6AE26DFA0680513129BE500261F6FB /* UUDeviceCheckColorTool.swift */; };
+		FFCB5670124CF0A5BEAB815EDE8758AD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC66460FB371F22D0FE6732D99790584 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09D3661A330498185BAD6E03405095A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4EFD5BE77B99AACFB0B7ACE03D198F;
+			remoteInfo = SVGAPlayer;
+		};
 		1C9A8E374468FCE3E3C2077839ED5A97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 470FE31978DC918618A329D8B55C85FF;
 			remoteInfo = Protobuf;
-		};
-		28DF138C8662633347753E807F12C60A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
 		};
 		2AAA00CB1374C142DBEE1EE651EF57A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -267,12 +270,12 @@
 			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
 			remoteInfo = SSZipArchive;
 		};
-		8618D1BD2FBDFF30DE37C30FF3385C8F /* PBXContainerItemProxy */ = {
+		895E96B692E3449759D19B3663AB6760 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EF4EFD5BE77B99AACFB0B7ACE03D198F;
-			remoteInfo = SVGAPlayer;
+			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
+			remoteInfo = SnapKit;
 		};
 		A307067D550544C7D851D180348662C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -307,6 +310,7 @@
 /* Begin PBXFileReference section */
 		00A271E94B1DB6552265FC13628D43BC /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
 		02A9C03507262F8876868C7F92E832A1 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
+		03CB87E787082B6A6A9E4AFF6E074C60 /* UUDeviceCheckMaicphoneView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckMaicphoneView.swift; path = UUDeviceModule/Classes/UUDeviceCheckMaicphoneView.swift; sourceTree = "<group>"; };
 		03D46937788DC054458E212A97DFC68C /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		046A5149EA0F7DBFA882CC1202BDFBD2 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
 		07A037D94BBBDA0FB5D7AC9DB2096891 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
@@ -314,17 +318,16 @@
 		0B0BC4418ECDF9E2BD669B31CA93C6D2 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		0B1FF03F49F0C9483DAFA9D283C7F29B /* Pods-UUDeviceModule_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UUDeviceModule_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0BBE454F431D6218C675844FE5D9CC0A /* Pods-UUDeviceModule_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UUDeviceModule_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0C0257534C9736E58E61B9C3C655419B /* UUMacroFle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUMacroFle.swift; path = UUDeviceModule/Classes/UUMacroFle.swift; sourceTree = "<group>"; };
 		0D938FE14D03FA9D51C288DEF81C2171 /* GPBEmpty.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBEmpty.pbobjc.h; path = objectivec/GPBEmpty.pbobjc.h; sourceTree = "<group>"; };
 		0FACD51B67C8FF459A9F335E743DA910 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		113BFFE4B082BF19F2B63BDF1461FB4F /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		116214269BD4A8A46B87693CB8F93BE3 /* GPBCodedInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedInputStream.m; path = objectivec/GPBCodedInputStream.m; sourceTree = "<group>"; };
+		1221DD2E561C156B0262F7FF4B8CD4DB /* UUDeviceCheckAiPlayVioceButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckAiPlayVioceButton.swift; path = UUDeviceModule/Classes/UUDeviceCheckAiPlayVioceButton.swift; sourceTree = "<group>"; };
+		1230501055A041EC87D76533F32BFF65 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		142E81E07823538FB02D916973E057FC /* mz_strm_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_os.h; path = SSZipArchive/minizip/mz_strm_os.h; sourceTree = "<group>"; };
 		14A8B645E3ABEFEF02C82435E1FF1657 /* SSZipArchive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.release.xcconfig; sourceTree = "<group>"; };
-		14AC33473D0BEA7692588FD5F256079C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		15049A00F155BD4D0DABA85B0924AF7F /* Protobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Protobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C0C66BBAF7E3DE894C7106541B2B21 /* Pods-UUDeviceModule_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UUDeviceModule_Example-Info.plist"; sourceTree = "<group>"; };
-		17DBE19C4A91DFF9FE8D08606694D731 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		180A253EAB9CA74A731306466569B21F /* SVGAAudioEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAAudioEntity.m; path = Source/SVGAAudioEntity.m; sourceTree = "<group>"; };
 		180AE6D597111B83281DAFE208227F0F /* GPBStruct.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBStruct.pbobjc.h; path = objectivec/GPBStruct.pbobjc.h; sourceTree = "<group>"; };
 		188FB233C9DD1F0CB2186DFB97D16EA8 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
@@ -332,23 +335,21 @@
 		1953B517C098E0B3B95A867D8A2FCB7E /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		1E6E11ED42E8B415B269786B92F35001 /* Protobuf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Protobuf-Info.plist"; sourceTree = "<group>"; };
 		1E9570F009ABABB667E93C9A148DB9C9 /* UUDeviceModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UUDeviceModule.framework; path = UUDeviceModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		20DF1E9CB920AF1F136D1AD629D30DE6 /* UUDeviceVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceVideoView.swift; path = UUDeviceModule/Classes/UUDeviceVideoView.swift; sourceTree = "<group>"; };
-		20EE4E16912DCF74054A748AAE5F5B5A /* UUDeviceCheckVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckVideoView.swift; path = UUDeviceModule/Classes/UUDeviceCheckVideoView.swift; sourceTree = "<group>"; };
 		211C9DC96B17C2E2614B838698334D57 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		227A9406A226D96370CC1B203E67E885 /* UUDeviceCheckTopView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckTopView.swift; path = UUDeviceModule/Classes/UUDeviceCheckTopView.swift; sourceTree = "<group>"; };
 		22B0D2F54566C5372ABAC79B7D6407FD /* GPBUnknownFieldSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownFieldSet.m; path = objectivec/GPBUnknownFieldSet.m; sourceTree = "<group>"; };
 		22BBA136C2D79E1FCE2045215C7B6AEA /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		23462DB22A1E2B1F5540E36761615C35 /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
-		2414E39DBD22E893D5E2332B852B5150 /* UUDeviceCheckMaicphoneView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckMaicphoneView.swift; path = UUDeviceModule/Classes/UUDeviceCheckMaicphoneView.swift; sourceTree = "<group>"; };
 		256170990C4EA1AAB12FFE5699C29D42 /* GPBProtocolBuffers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers.h; path = objectivec/GPBProtocolBuffers.h; sourceTree = "<group>"; };
-		25E25A7DB0B3CEE407D5B6BD9D46D4D8 /* UUDeviceModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UUDeviceModule.debug.xcconfig; sourceTree = "<group>"; };
 		27A65FE3F264F2EEEFACF41C0BAC802E /* Pods_UUDeviceModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UUDeviceModule_Tests.framework; path = "Pods-UUDeviceModule_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		289B9C1EDB34665B0D06F3F652F9B22B /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
 		292700792BCC1AAEAEE4B8BEFB913343 /* Any.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Any.pbobjc.h; path = objectivec/google/protobuf/Any.pbobjc.h; sourceTree = "<group>"; };
 		295DA22538EB76B6CED5ADD67C9A3B92 /* SVGAPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVGAPlayer-umbrella.h"; sourceTree = "<group>"; };
 		2963A297F2C83C6B3AA54BCC1F1C200A /* GPBTimestamp.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBTimestamp.pbobjc.m; path = objectivec/GPBTimestamp.pbobjc.m; sourceTree = "<group>"; };
 		2BC3BEDC55752CE4456D0EDB06004D6E /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
+		2C0320961A1AED3F41D8CD833FEE24F6 /* SwiftFitSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftFitSize.swift; path = UUDeviceModule/Classes/SwiftFitSize.swift; sourceTree = "<group>"; };
 		2C74E5F347CBDEDADB90BD1C60DEE962 /* Protobuf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Protobuf-prefix.pch"; sourceTree = "<group>"; };
-		2D6AE26DFA0680513129BE500261F6FB /* UUDeviceCheckColorTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckColorTool.swift; path = UUDeviceModule/Classes/UUDeviceCheckColorTool.swift; sourceTree = "<group>"; };
+		2D70E52483764C6BB7F9E197C97293EB /* UUDeviceVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceVideoView.swift; path = UUDeviceModule/Classes/UUDeviceVideoView.swift; sourceTree = "<group>"; };
 		2DA50153501D63FEB077B3B17CB0913A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2E0EFC0208652EC6EA102D83C2AC4455 /* Protobuf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Protobuf.modulemap; sourceTree = "<group>"; };
 		2E3E7B4AE4D58CDC352329418945B783 /* Protobuf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Protobuf-dummy.m"; sourceTree = "<group>"; };
@@ -360,6 +361,7 @@
 		3079401082458950495F2DC04E71FC4E /* SVGAPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SVGAPlayer.framework; path = SVGAPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365968C21769A151B6F8D175018BC70 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWellKnownTypes.m; path = objectivec/GPBWellKnownTypes.m; sourceTree = "<group>"; };
 		338DD7CD4A84D7F5A6FF94751D6E634C /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet_PackagePrivate.h; path = objectivec/GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
+		343836FDD2AACB9C4DBF1EA9B3DAEA5F /* UUDeviceModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UUDeviceModule-prefix.pch"; sourceTree = "<group>"; };
 		3508121995A1C770C5F000F1D5E68125 /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary_PackagePrivate.h; path = objectivec/GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
 		352BA4DD3E116BCC0ECABE3AD5BE7F93 /* GPBExtensionRegistry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBExtensionRegistry.m; path = objectivec/GPBExtensionRegistry.m; sourceTree = "<group>"; };
 		35A42F9E75989C3AA792EB03CE3D551D /* mz_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_compat.h; path = SSZipArchive/minizip/mz_compat.h; sourceTree = "<group>"; };
@@ -368,19 +370,19 @@
 		36D68CD697CF7B2C9F7B0F991CD8844A /* SVGAParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAParser.m; path = Source/SVGAParser.m; sourceTree = "<group>"; };
 		37498677A850760B994BD8DF8B28F1DD /* GPBFieldMask.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBFieldMask.pbobjc.m; path = objectivec/GPBFieldMask.pbobjc.m; sourceTree = "<group>"; };
 		37CDE7BF730E89D53D671550FD7CE841 /* SVGAVideoSpriteEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAVideoSpriteEntity.h; path = Source/SVGAVideoSpriteEntity.h; sourceTree = "<group>"; };
+		3882D4817A32A48272421BAD4E5D01E0 /* UUDeviceCheckBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckBottomView.swift; path = UUDeviceModule/Classes/UUDeviceCheckBottomView.swift; sourceTree = "<group>"; };
+		3889FB48BB01727F1967A66DAB097A9F /* UUDeviceAuthorManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceAuthorManager.swift; path = UUDeviceModule/Classes/UUDeviceAuthorManager.swift; sourceTree = "<group>"; };
 		39C0AC3FDE1CB474382C065BA8BE50B3 /* SVGAVideoSpriteFrameEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAVideoSpriteFrameEntity.m; path = Source/SVGAVideoSpriteFrameEntity.m; sourceTree = "<group>"; };
 		3A0C68B57F379E7500BD4706858C2CCD /* SVGAVectorLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAVectorLayer.h; path = Source/SVGAVectorLayer.h; sourceTree = "<group>"; };
+		3A83BA75A5C5DAE86F3679BD613DBE35 /* UUDeviceinsertErrorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceinsertErrorView.swift; path = UUDeviceModule/Classes/UUDeviceinsertErrorView.swift; sourceTree = "<group>"; };
 		3B0C42020D4BC5AAB64B30D50363E2E7 /* mz_strm_split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_split.h; path = SSZipArchive/minizip/mz_strm_split.h; sourceTree = "<group>"; };
-		3C048D4C192C1E942F498225255A02E3 /* UUDeviceModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UUDeviceModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3C6966A6138BFF59435E7E1021F7B1A3 /* Timestamp.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Timestamp.pbobjc.h; path = objectivec/google/protobuf/Timestamp.pbobjc.h; sourceTree = "<group>"; };
-		3C97B9F3529B9AE2F20909B709E84AA0 /* UUDeviceConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceConfig.swift; path = UUDeviceModule/Classes/UUDeviceConfig.swift; sourceTree = "<group>"; };
 		3CE883BBB8E742BC98137ABB22A648DA /* SVGAAudioLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAAudioLayer.m; path = Source/SVGAAudioLayer.m; sourceTree = "<group>"; };
 		3ED914B0D5AA0CA4899C3E0A7E30B830 /* SVGABitmapLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGABitmapLayer.h; path = Source/SVGABitmapLayer.h; sourceTree = "<group>"; };
 		3FF9ABC457466AE3289A0709D107111F /* SVGAVideoSpriteEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAVideoSpriteEntity.m; path = Source/SVGAVideoSpriteEntity.m; sourceTree = "<group>"; };
-		40F6B1236C4F9D45CBE8A96225342A90 /* UUDeviceNetworkPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceNetworkPing.swift; path = UUDeviceModule/Classes/UUDeviceNetworkPing.swift; sourceTree = "<group>"; };
+		403E56C219EBF4D24ADFC2C26E07103C /* UUDeviceRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceRecord.swift; path = UUDeviceModule/Classes/UUDeviceRecord.swift; sourceTree = "<group>"; };
 		41D1C8F243B42FC3566D9D577A08DB4B /* SourceContext.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SourceContext.pbobjc.h; path = objectivec/google/protobuf/SourceContext.pbobjc.h; sourceTree = "<group>"; };
 		41ECC64E5A3CC11BCB939F4814AC0200 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField_PackagePrivate.h; path = objectivec/GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
-		42B2C73A0BA60547DBEC27A5A4BCCCC4 /* UUDeviceRecord.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceRecord.swift; path = UUDeviceModule/Classes/UUDeviceRecord.swift; sourceTree = "<group>"; };
 		42EE24C570DF7C1E8837F64385CA6FF2 /* GPBDescriptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDescriptor.m; path = objectivec/GPBDescriptor.m; sourceTree = "<group>"; };
 		43984F5EAF07E9B2A936D90CF3ABABE7 /* SVGA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGA.m; path = Source/SVGA.m; sourceTree = "<group>"; };
 		44725BBDFBA4804A0BC4D3EDCE117312 /* GPBWireFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBWireFormat.h; path = objectivec/GPBWireFormat.h; sourceTree = "<group>"; };
@@ -389,13 +391,13 @@
 		47631976E6667A1230CBCCBA40AEDA9C /* GPBCodedOutputStream_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedOutputStream_PackagePrivate.h; path = objectivec/GPBCodedOutputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		4814EE5A1B9A3253F9C1596544EAADE2 /* mz_zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip.h; path = SSZipArchive/minizip/mz_zip.h; sourceTree = "<group>"; };
 		48E9094E8554B9998E9313451FB125AF /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		4A6D58C26F548E014BD3C37D6E98EF98 /* UUDeviceCheckSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckSuccessView.swift; path = UUDeviceModule/Classes/UUDeviceCheckSuccessView.swift; sourceTree = "<group>"; };
 		4A9BA48749E9D6397EF62FD20805F736 /* GPBArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBArray.h; path = objectivec/GPBArray.h; sourceTree = "<group>"; };
+		4AADABE4A06C8DF604B8F40AC147E79B /* SwiftyPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyPing.swift; path = UUDeviceModule/Classes/SwiftyPing.swift; sourceTree = "<group>"; };
 		4B56E6F5BE14CF78732D638F12E1EFA4 /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
 		4D4B6BE7A664862D4189BC2A95612B4F /* SVGAAudioEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAAudioEntity.h; path = Source/SVGAAudioEntity.h; sourceTree = "<group>"; };
+		4D8F77CB55E1D7C87FD41932EC3CBA97 /* UUMacroFle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUMacroFle.swift; path = UUDeviceModule/Classes/UUMacroFle.swift; sourceTree = "<group>"; };
 		4DA02A10667EC40B446B58B2A083AFFB /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		4EB6716A669CB0DF890E7D9A12AFC87B /* SVGAPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SVGAPlayer-Info.plist"; sourceTree = "<group>"; };
-		516EDD1B98B4E060C73193B727DF7C26 /* UUDeviceCheckSpeakerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckSpeakerView.swift; path = UUDeviceModule/Classes/UUDeviceCheckSpeakerView.swift; sourceTree = "<group>"; };
 		521A93531D92A3709212990DB27E085A /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		52A10B8C65E40F8A96FA57C53E368ADA /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		54377E46AFA440691DE8F3D7B2ED6612 /* GPBMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBMessage.m; path = objectivec/GPBMessage.m; sourceTree = "<group>"; };
@@ -407,37 +409,37 @@
 		5B37F65258AC701C56311C489A0556DF /* GPBWireFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWireFormat.m; path = objectivec/GPBWireFormat.m; sourceTree = "<group>"; };
 		5B8050B0387A505B173AF3DE0D2DBF65 /* GPBUnknownField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUnknownField.m; path = objectivec/GPBUnknownField.m; sourceTree = "<group>"; };
 		5B8A60B37794C7798DCFB7F38C75ED9D /* Pods-UUDeviceModule_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UUDeviceModule_Example-umbrella.h"; sourceTree = "<group>"; };
+		5BBB33D8290B014C913A9293FD2F54E1 /* UUDeviceModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UUDeviceModule-Info.plist"; sourceTree = "<group>"; };
 		5D010BA7DB6F7B01B3D2E925199BF268 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
-		603D744C4FE818B764114FDC9FF52659 /* UUDeviceCheckResultModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckResultModel.swift; path = UUDeviceModule/Classes/UUDeviceCheckResultModel.swift; sourceTree = "<group>"; };
+		5E10CD13BBAD8F957F07AACBA3114888 /* UUDeviceCheckVideoView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckVideoView.swift; path = UUDeviceModule/Classes/UUDeviceCheckVideoView.swift; sourceTree = "<group>"; };
+		60313C57432B5C4E1F6EBB2A33A990BF /* UUNetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUNetworkReachabilityManager.swift; path = UUDeviceModule/Classes/UUNetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		61525FD6FCFA407C1EFDFCD35BBD8BDE /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		62EB644AFD8916498D8E906E38A36838 /* SVGAPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SVGAPlayer-dummy.m"; sourceTree = "<group>"; };
 		62F3EED4DC92FB7E8500D656121853DD /* Empty.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Empty.pbobjc.h; path = objectivec/google/protobuf/Empty.pbobjc.h; sourceTree = "<group>"; };
 		63641DF00E4B8539F565920DAA22AFC5 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		65B46F791926699D5A1E7CE090CCBA35 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		667276CA3C6D81675A8C369EFCEC77E9 /* mz_strm_wzaes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_wzaes.h; path = SSZipArchive/minizip/mz_strm_wzaes.h; sourceTree = "<group>"; };
-		66B00597E5D3250A677507B4E34502BC /* UUDeviceModule-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UUDeviceModule-prefix.pch"; sourceTree = "<group>"; };
 		66D3461811C1D4F3E28BD031D53822A4 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Source/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
 		696CD4D76A7D9DCE49B483D872D9A831 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedInputStream_PackagePrivate.h; path = objectivec/GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
 		6C409AFD182D07B54DCD83B2D75B95E6 /* GPBApi.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBApi.pbobjc.m; path = objectivec/GPBApi.pbobjc.m; sourceTree = "<group>"; };
 		6CECF89324A69FA3DCA667239AE6DE88 /* GPBWrappers.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBWrappers.pbobjc.m; path = objectivec/GPBWrappers.pbobjc.m; sourceTree = "<group>"; };
 		6E2EEA76C960FF8AF723740F41B27549 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		6FE64392A2CFF0007A6713C04D057475 /* SVGAExporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAExporter.h; path = Source/SVGAExporter.h; sourceTree = "<group>"; };
+		70C9AEF3976A57BE3FF5E5E5B626A9BC /* UUCheckSources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UUCheckSources.bundle; path = UUDeviceModule/UUCheckSources.bundle; sourceTree = "<group>"; };
 		710DDFA172F495896258E5C707FB073B /* GPBRootObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRootObject.h; path = objectivec/GPBRootObject.h; sourceTree = "<group>"; };
 		717384A0D04E29021B6AAC299282E63A /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
 		71E690E81AAC31A277DB03E095E889D5 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		723F030DADAC0DDE0C8E0657682F75D3 /* GPBBootstrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBBootstrap.h; path = objectivec/GPBBootstrap.h; sourceTree = "<group>"; };
 		72407F3F5C7C3DD4D350873AD019BF9E /* GPBSourceContext.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBSourceContext.pbobjc.h; path = objectivec/GPBSourceContext.pbobjc.h; sourceTree = "<group>"; };
+		72C99CDA100920017DA46CD5F7FCFEEE /* UUDeviceCheckController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckController.swift; path = UUDeviceModule/Classes/UUDeviceCheckController.swift; sourceTree = "<group>"; };
 		7477D80595A8ECDE68899D8ADBD96534 /* Pods-UUDeviceModule_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UUDeviceModule_Tests-Info.plist"; sourceTree = "<group>"; };
 		76A84034D4C8D38E5FAA102F604E328A /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
-		76CC262A49ABD5150EA40DA18F2FD872 /* UUDeviceModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UUDeviceModule.modulemap; sourceTree = "<group>"; };
 		77A1132F71DE003F80220F68C4A58E45 /* SVGAImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAImageView.m; path = Source/SVGAImageView.m; sourceTree = "<group>"; };
 		794FD4DDE5B18C9220F663D06EDEE3A9 /* SVGAPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAPlayer.h; path = Source/SVGAPlayer.h; sourceTree = "<group>"; };
 		79E423E54FD45338E3F90B4B1A834FC1 /* GPBUnknownField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownField.h; path = objectivec/GPBUnknownField.h; sourceTree = "<group>"; };
-		7A3216B07D6D5FB9853D84B7BB6B94AA /* UUDeviceCheckAiPlayVioceButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckAiPlayVioceButton.swift; path = UUDeviceModule/Classes/UUDeviceCheckAiPlayVioceButton.swift; sourceTree = "<group>"; };
 		7F641E3BB6345722B56CEE45A27DB64E /* mz.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz.h; path = SSZipArchive/minizip/mz.h; sourceTree = "<group>"; };
 		7F92DA0F95895255F2BA3A529D025FF0 /* SVGAPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAPlayer.m; path = Source/SVGAPlayer.m; sourceTree = "<group>"; };
 		7FFC6E4E0119909933D258359C31DE6D /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		81EA32B54A17C67F9168FF3FD36DB75F /* UUDeviceModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UUDeviceModule-dummy.m"; sourceTree = "<group>"; };
 		82DBA774EC1B139CCD8755E4D0DB188E /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		836D2F5F4D9C73DE37921B1038AB0DF1 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBMessage_PackagePrivate.h; path = objectivec/GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
 		83707F975D1FA2944DCF7EF903D98BEA /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBWellKnownTypes.h; path = objectivec/GPBWellKnownTypes.h; sourceTree = "<group>"; };
@@ -449,58 +451,60 @@
 		888533DBF173314BED08C8091C648A90 /* SVGAVideoSpriteFrameEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAVideoSpriteFrameEntity.h; path = Source/SVGAVideoSpriteFrameEntity.h; sourceTree = "<group>"; };
 		89153D6ACF03B575382D762227CB5A02 /* SVGAPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVGAPlayer.release.xcconfig; sourceTree = "<group>"; };
 		89A9118480F71050AB28770D5110B24B /* GPBType.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBType.pbobjc.h; path = objectivec/GPBType.pbobjc.h; sourceTree = "<group>"; };
-		8A275F44845B795338FCE7D44D76E321 /* UUDeviceCheckErrorCollectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckErrorCollectionCell.swift; path = UUDeviceModule/Classes/UUDeviceCheckErrorCollectionCell.swift; sourceTree = "<group>"; };
 		8A2B005907AB11DFEAB8085260BF87C9 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		8A7AA057DC407B52406FA8A7CBC5B0DE /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
 		8C3497AF6514820D75E37E9B34CBDF1A /* mz_crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_crypt.h; path = SSZipArchive/minizip/mz_crypt.h; sourceTree = "<group>"; };
 		8C915EBF734A5CFBEFA26A03E0780F62 /* SVGAPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SVGAPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDAA89894611ADB8B35EEE0BCB4B8BC /* GPBMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBMessage.h; path = objectivec/GPBMessage.h; sourceTree = "<group>"; };
 		8DCE9FC2FD536504C96922C716BB01B9 /* SVGA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGA.h; path = Source/SVGA.h; sourceTree = "<group>"; };
+		8E20959F3A414F8242C24314321B7A54 /* UUDeviceCheckErrorCollectionCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckErrorCollectionCell.swift; path = UUDeviceModule/Classes/UUDeviceCheckErrorCollectionCell.swift; sourceTree = "<group>"; };
 		8F2F5571FC8C3369E5AE478311EE1566 /* Type.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Type.pbobjc.h; path = objectivec/google/protobuf/Type.pbobjc.h; sourceTree = "<group>"; };
-		90D7FD1FF6A8107D56837A9E1B70F1D6 /* UUDeviceCheckFailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckFailView.swift; path = UUDeviceModule/Classes/UUDeviceCheckFailView.swift; sourceTree = "<group>"; };
 		912E914506ADEE58AB5ADCE12163E235 /* GPBUnknownFieldSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUnknownFieldSet.h; path = objectivec/GPBUnknownFieldSet.h; sourceTree = "<group>"; };
 		91688598E0BF7DDD948884E2E966AE3C /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FieldMask.pbobjc.h; path = objectivec/google/protobuf/FieldMask.pbobjc.h; sourceTree = "<group>"; };
+		91AFCE9B49A9816E37ED4A27F6B70163 /* UUDeviceModule-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UUDeviceModule-dummy.m"; sourceTree = "<group>"; };
 		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E594DE5E7844DEA5E7B2D39FC34618 /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBProtocolBuffers_RuntimeSupport.h; path = objectivec/GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
 		929823AB3BA93675931F0DA31CF811FB /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsets.swift; path = Source/ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		92C36E1965D0B24C682103C2E9AC90EE /* GPBWrappers.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBWrappers.pbobjc.h; path = objectivec/GPBWrappers.pbobjc.h; sourceTree = "<group>"; };
 		948EB43FE71D6E17F0555B9F2EE47499 /* Pods-UUDeviceModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UUDeviceModule_Example.release.xcconfig"; sourceTree = "<group>"; };
+		956D4A83A87752FA6A4D57B66A9BBA9F /* UUDeviceModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UUDeviceModule-umbrella.h"; sourceTree = "<group>"; };
 		97173AE352508F59816CA18C739076E5 /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
 		977FFC7734A7939A21D7F6479BB00A3E /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C1208A2FB8AE435A84A715BBFFDC91 /* SVGABezierPath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGABezierPath.h; path = Source/SVGABezierPath.h; sourceTree = "<group>"; };
 		995C3FD2FF5374C7003793A624501C94 /* GPBDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDictionary.h; path = objectivec/GPBDictionary.h; sourceTree = "<group>"; };
 		9BA6F58B87B7B3E110635673BB6A388E /* GPBTimestamp.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBTimestamp.pbobjc.h; path = objectivec/GPBTimestamp.pbobjc.h; sourceTree = "<group>"; };
+		9C1A1BFB071FD8CEB111B6877ABECDAB /* UUDeviceCheckSpeakerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckSpeakerView.swift; path = UUDeviceModule/Classes/UUDeviceCheckSpeakerView.swift; sourceTree = "<group>"; };
 		9C5F0BB0D17A24513CFA7885376E96D0 /* Api.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Api.pbobjc.h; path = objectivec/google/protobuf/Api.pbobjc.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DDFB6F93F519FE1075FD286DC6BE4E5 /* SVGAAudioLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAAudioLayer.h; path = Source/SVGAAudioLayer.h; sourceTree = "<group>"; };
+		9E3A48CC34F195D7534535E906009855 /* UUDeviceCheckFailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckFailView.swift; path = UUDeviceModule/Classes/UUDeviceCheckFailView.swift; sourceTree = "<group>"; };
 		A087A6B2037D802D078A5B8A51B39C1B /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		A1115B2A6EE936FF9E7F0769B31BEE48 /* Pods-UUDeviceModule_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UUDeviceModule_Tests-dummy.m"; sourceTree = "<group>"; };
 		A3D16864FBE58A33E86B654B51F9C560 /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
 		A5480157A80DE063EED3CF9124FA54B4 /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		A580FD59410FDEB8EE74D7D851490582 /* GPBDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBDictionary.m; path = objectivec/GPBDictionary.m; sourceTree = "<group>"; };
-		A5A812A418D36199E8D66C0F28BEFA7B /* UUDeviceCheckBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckBottomView.swift; path = UUDeviceModule/Classes/UUDeviceCheckBottomView.swift; sourceTree = "<group>"; };
 		A5FB1E78E86351A80D6C2D520B2CE418 /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
+		A6C6022013449F31A0478F4498D01AD2 /* UUDeviceCheckResultModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckResultModel.swift; path = UUDeviceModule/Classes/UUDeviceCheckResultModel.swift; sourceTree = "<group>"; };
 		A6FF6091EAA9B0DE454FF1866C5416AD /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		A8F0912D4949E61C3BC07505AC0473EE /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		AAB79AF4494478C58BC5200C6C7C65A7 /* mz_zip_rw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip_rw.h; path = SSZipArchive/minizip/mz_zip_rw.h; sourceTree = "<group>"; };
-		AB5265BAFE6C8D2EDA1AF99CCB73E91F /* SwiftyPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyPing.swift; path = UUDeviceModule/Classes/SwiftyPing.swift; sourceTree = "<group>"; };
+		AD3298BC5C91A1DEE57BEB5D98E5DA3C /* UUDeviceModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UUDeviceModule.release.xcconfig; sourceTree = "<group>"; };
 		AD34D8368781938FFE93EDB0A351017A /* SSZipArchive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.debug.xcconfig; sourceTree = "<group>"; };
 		AEBF637CD879FBE03FF400F5F39DF169 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRuntimeTypes.h; path = objectivec/GPBRuntimeTypes.h; sourceTree = "<group>"; };
 		B043917F880B331370902E12909460C7 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		B0583A6D03230108D5A6FD4537F35124 /* UUDeviceCheckSuccessView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckSuccessView.swift; path = UUDeviceModule/Classes/UUDeviceCheckSuccessView.swift; sourceTree = "<group>"; };
 		B06AE989222EABDF499C710EC5C18425 /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
 		B314B3D666504B072EA612F653076322 /* mz_strm_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_buf.h; path = SSZipArchive/minizip/mz_strm_buf.h; sourceTree = "<group>"; };
 		B60A12D89D81B164FF1FCFF798658C1D /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
 		B6A82A90CDE27936DF2D47133F6F927D /* Pods-UUDeviceModule_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UUDeviceModule_Example.modulemap"; sourceTree = "<group>"; };
 		B8A28990DA6A81E1CCF422F0B00FEE0F /* Pods-UUDeviceModule_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UUDeviceModule_Tests.modulemap"; sourceTree = "<group>"; };
 		B8A759730BD60323E9E21E9418582053 /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
-		B9BBEF87D823C1E9C666D96AC9184007 /* UUDeviceModule-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UUDeviceModule-umbrella.h"; sourceTree = "<group>"; };
 		BA24E40682C91697B2A13F563CFC14C3 /* SVGAContentLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAContentLayer.m; path = Source/SVGAContentLayer.m; sourceTree = "<group>"; };
 		BA604E86067E40FA115975E626A2F567 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = objectivec/GPBCodedOutputStream.m; sourceTree = "<group>"; };
-		BBD9558388F26100E3F8AB56312144D0 /* UUCheckSources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UUCheckSources.bundle; path = UUDeviceModule/UUCheckSources.bundle; sourceTree = "<group>"; };
-		BBE5A583A450ED83C0A343238C63FC22 /* UUDeviceCheckTopView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckTopView.swift; path = UUDeviceModule/Classes/UUDeviceCheckTopView.swift; sourceTree = "<group>"; };
 		BDDB6B0ADEA3F4C067209D3B34085B15 /* GPBDuration.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDuration.pbobjc.h; path = objectivec/GPBDuration.pbobjc.h; sourceTree = "<group>"; };
 		BDE6FDCB523C93053B374A7D8FB78081 /* SVGABitmapLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGABitmapLayer.m; path = Source/SVGABitmapLayer.m; sourceTree = "<group>"; };
+		BF35821EDF96216E4B2F6FD143D53D0E /* UUDeviceCheckColorTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckColorTool.swift; path = UUDeviceModule/Classes/UUDeviceCheckColorTool.swift; sourceTree = "<group>"; };
 		BF9A60B3A3EF3D2EFFC50DC4E07C8E90 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		BFC7E6EE9A4FCE6726A100F5ECBEA7D9 /* GPBUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBUtilities.h; path = objectivec/GPBUtilities.h; sourceTree = "<group>"; };
 		C025257B82BB238942E6833F2E1C4F62 /* SVGAVideoEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAVideoEntity.h; path = Source/SVGAVideoEntity.h; sourceTree = "<group>"; };
@@ -512,15 +516,17 @@
 		C527B964BB0AE74181EFB9328A61CB27 /* Struct.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Struct.pbobjc.h; path = objectivec/google/protobuf/Struct.pbobjc.h; sourceTree = "<group>"; };
 		C5664EB23843A518A8F54431EFE3B193 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
 		C6DF5FFDB11C5B925753461B3D299525 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBExtensionInternals.h; path = objectivec/GPBExtensionInternals.h; sourceTree = "<group>"; };
+		C72D369A100EFE289F81CB28E5CDE505 /* UUDeviceModule.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UUDeviceModule.modulemap; sourceTree = "<group>"; };
 		C77954F3B0A161951F51FA1F87A5A417 /* Pods-UUDeviceModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UUDeviceModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7AE299DAB8735AA8BD5CE5E6E949DED /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		C94B82E65C5F71DA01BEB7D284C12978 /* Pods-UUDeviceModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UUDeviceModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C9C5F17EE59AA7C5E55A5737B50020C0 /* UUDeviceModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UUDeviceModule.release.xcconfig; sourceTree = "<group>"; };
 		CB9A5F266AA2FBF744371DD860971797 /* SVGAVideoEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAVideoEntity.m; path = Source/SVGAVideoEntity.m; sourceTree = "<group>"; };
+		CC00E719D8F133663D44E29F19B27ED8 /* UUDeviceModule.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UUDeviceModule.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CCDB5A06DDF24D5981E3E227D4CCE059 /* SVGAPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SVGAPlayer-prefix.pch"; sourceTree = "<group>"; };
-		CDCCD68EF023E44DF724818F0B36FEDD /* UUSvgaAnimationCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUSvgaAnimationCenter.swift; path = UUDeviceModule/Classes/UUSvgaAnimationCenter.swift; sourceTree = "<group>"; };
+		CD4FD1F47AECB52795D9F77E4152685A /* UUDeviceNetworkPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceNetworkPing.swift; path = UUDeviceModule/Classes/UUDeviceNetworkPing.swift; sourceTree = "<group>"; };
 		D0593A51C2007CDB5921011C0215C4DD /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		D087F6BCE70CA1E1B6116C469B943091 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
+		D1E7F63A13D9B5304DEF960BB197664A /* UUDeviceConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceConfig.swift; path = UUDeviceModule/Classes/UUDeviceConfig.swift; sourceTree = "<group>"; };
 		D30807CAC7DCC5101D9011089DFA9BC7 /* Protobuf.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Protobuf.release.xcconfig; sourceTree = "<group>"; };
 		D393C4310638A1C59941E166747C055A /* GPBUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBUtilities.m; path = objectivec/GPBUtilities.m; sourceTree = "<group>"; };
 		D3EEB0549E774DF2B4C02A6B83199155 /* GPBArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBArray.m; path = objectivec/GPBArray.m; sourceTree = "<group>"; };
@@ -531,16 +537,17 @@
 		D71A09FDD97B478319D68488BE98B713 /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
 		D7BC00D11D81CF85EE3D3AC7CF7200E9 /* Pods-UUDeviceModule_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UUDeviceModule_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D85EC5D1B00A606BFDB0C692BB01890F /* SVGAPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SVGAPlayer.modulemap; sourceTree = "<group>"; };
+		DA51EED01A6E4AC36A2215429BC6911F /* UUDeviceModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UUDeviceModule.debug.xcconfig; sourceTree = "<group>"; };
 		DAA526C37845CF759A202B2D3512B4EC /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
 		DBC7D4FA8F9D1559362B4EAB9DCA17C8 /* Wrappers.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Wrappers.pbobjc.h; path = objectivec/google/protobuf/Wrappers.pbobjc.h; sourceTree = "<group>"; };
 		DBFA13064EF64B983B5575FE4F887D14 /* GPBType.pbobjc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBType.pbobjc.m; path = objectivec/GPBType.pbobjc.m; sourceTree = "<group>"; };
 		DC8D9A9A626E38AF79C01D6970369AD0 /* GPBCodedOutputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBCodedOutputStream.h; path = objectivec/GPBCodedOutputStream.h; sourceTree = "<group>"; };
-		DD83003FEC3CCAF90C1700DFBDF2A0CC /* UUDeviceAuthorManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceAuthorManager.swift; path = UUDeviceModule/Classes/UUDeviceAuthorManager.swift; sourceTree = "<group>"; };
 		DE00AE2C32010786F462E6801533C2B5 /* GPBDescriptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBDescriptor.h; path = objectivec/GPBDescriptor.h; sourceTree = "<group>"; };
 		E1DA939B1343E2248E6C2A62B06267D6 /* GPBFieldMask.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBFieldMask.pbobjc.h; path = objectivec/GPBFieldMask.pbobjc.h; sourceTree = "<group>"; };
 		E23521A41FAEA79DBCFED7CA9B9B3AB2 /* SVGAImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGAImageView.h; path = Source/SVGAImageView.h; sourceTree = "<group>"; };
+		E32A6BBEADAB766DAA7AD2D9285A5818 /* UUDeviceAudioTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceAudioTool.swift; path = UUDeviceModule/Classes/UUDeviceAudioTool.swift; sourceTree = "<group>"; };
+		E76AE7F30B619C47190B85A2B33AA7D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E81AE9D3E0091226A0F0CBDDAAF8E7F1 /* GPBRootObject_PackagePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBRootObject_PackagePrivate.h; path = objectivec/GPBRootObject_PackagePrivate.h; sourceTree = "<group>"; };
-		E9D698299774E10138305A87D3EB9578 /* UUDeviceCheckController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceCheckController.swift; path = UUDeviceModule/Classes/UUDeviceCheckController.swift; sourceTree = "<group>"; };
 		EB6BDCDA66FC1CA908C8AEB4FC376CD1 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
 		EB95805D9820DCACC115CDDDBA359068 /* Pods-UUDeviceModule_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UUDeviceModule_Example-dummy.m"; sourceTree = "<group>"; };
 		EC66460FB371F22D0FE6732D99790584 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -553,10 +560,9 @@
 		F1F41ADF46FA074CD367983ED117FA99 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		F20CE8C035BC1C54C88B2C96E296474C /* GPBApi.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBApi.pbobjc.h; path = objectivec/GPBApi.pbobjc.h; sourceTree = "<group>"; };
 		F34DECB2E441D69074300F4F9FB4B60C /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		F49A942BA73B5C194F4074FD36E99032 /* UUDeviceAudioTool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUDeviceAudioTool.swift; path = UUDeviceModule/Classes/UUDeviceAudioTool.swift; sourceTree = "<group>"; };
 		F4D31560185BD066C5C4E04C61F916E1 /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
+		F536FF3A64B34741D14DAB08CDCB4A94 /* UUSvgaAnimationCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UUSvgaAnimationCenter.swift; path = UUDeviceModule/Classes/UUSvgaAnimationCenter.swift; sourceTree = "<group>"; };
 		F5948235E5C29A87890C9AF910984F89 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		F6641C6EA30D920C6E2BEF66203FB8D7 /* UUDeviceModule-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UUDeviceModule-Info.plist"; sourceTree = "<group>"; };
 		F68600203155BABD6B80EA3AEAC71EBB /* Pods_UUDeviceModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UUDeviceModule_Example.framework; path = "Pods-UUDeviceModule_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C95AEB51AE0D90548B1D7614270F87 /* GPBAny.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GPBAny.pbobjc.h; path = objectivec/GPBAny.pbobjc.h; sourceTree = "<group>"; };
 		F7E8190C5E66D0811F4AA35CDCE8A347 /* SVGAVectorLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGAVectorLayer.m; path = Source/SVGAVectorLayer.m; sourceTree = "<group>"; };
@@ -572,15 +578,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B7912C0B573D3AC0AFEB6831C29D167 /* Frameworks */ = {
+		2F06E9138529BB09C1F6239E2526F599 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A742AC4183A16E8D4F02841DAC6484 /* AVFoundation.framework in Frameworks */,
-				13CF65A6B89CB08C824E79004F93AB0E /* Foundation.framework in Frameworks */,
-				7CAB2D620F0A62E390E15C5A601BFD0C /* SnapKit.framework in Frameworks */,
-				C8C37C16804BDFC0D58F7865E11D38AB /* SVGAPlayer.framework in Frameworks */,
-				D4E71368C5F4FFC3BD1F5BB95E9065B2 /* UIKit.framework in Frameworks */,
+				FFCB5670124CF0A5BEAB815EDE8758AD /* AVFoundation.framework in Frameworks */,
+				CF3A270172F149910F8504AED7C07C76 /* Foundation.framework in Frameworks */,
+				CE56939EE4DE5306FA4FFB92790DAEAB /* SnapKit.framework in Frameworks */,
+				BD4C90DC724CBA0FFB50715F917301C6 /* SVGAPlayer.framework in Frameworks */,
+				D93B4C41D4FDA6C81F8E6BAE9F7EA773 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +654,14 @@
 				373593DF8DD7207CAD2004DA96304724 /* SVGAPlayer */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D7DA938B4D0FF910C296836CD63E468 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				70C9AEF3976A57BE3FF5E5E5B626A9BC /* UUCheckSources.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		34E85731D4811C96A1F00EEFF5E249F4 /* Protobuf */ = {
@@ -742,33 +756,36 @@
 			path = SVGAPlayer;
 			sourceTree = "<group>";
 		};
-		4E8834DA90D35BDC61E8F724616692A1 /* UUDeviceModule */ = {
+		3A8EE68689FAC180E149D9139A24690A /* UUDeviceModule */ = {
 			isa = PBXGroup;
 			children = (
-				AB5265BAFE6C8D2EDA1AF99CCB73E91F /* SwiftyPing.swift */,
-				F49A942BA73B5C194F4074FD36E99032 /* UUDeviceAudioTool.swift */,
-				DD83003FEC3CCAF90C1700DFBDF2A0CC /* UUDeviceAuthorManager.swift */,
-				7A3216B07D6D5FB9853D84B7BB6B94AA /* UUDeviceCheckAiPlayVioceButton.swift */,
-				A5A812A418D36199E8D66C0F28BEFA7B /* UUDeviceCheckBottomView.swift */,
-				2D6AE26DFA0680513129BE500261F6FB /* UUDeviceCheckColorTool.swift */,
-				E9D698299774E10138305A87D3EB9578 /* UUDeviceCheckController.swift */,
-				8A275F44845B795338FCE7D44D76E321 /* UUDeviceCheckErrorCollectionCell.swift */,
-				90D7FD1FF6A8107D56837A9E1B70F1D6 /* UUDeviceCheckFailView.swift */,
-				2414E39DBD22E893D5E2332B852B5150 /* UUDeviceCheckMaicphoneView.swift */,
-				603D744C4FE818B764114FDC9FF52659 /* UUDeviceCheckResultModel.swift */,
-				516EDD1B98B4E060C73193B727DF7C26 /* UUDeviceCheckSpeakerView.swift */,
-				4A6D58C26F548E014BD3C37D6E98EF98 /* UUDeviceCheckSuccessView.swift */,
-				BBE5A583A450ED83C0A343238C63FC22 /* UUDeviceCheckTopView.swift */,
-				20EE4E16912DCF74054A748AAE5F5B5A /* UUDeviceCheckVideoView.swift */,
-				3C97B9F3529B9AE2F20909B709E84AA0 /* UUDeviceConfig.swift */,
-				40F6B1236C4F9D45CBE8A96225342A90 /* UUDeviceNetworkPing.swift */,
-				42B2C73A0BA60547DBEC27A5A4BCCCC4 /* UUDeviceRecord.swift */,
-				20DF1E9CB920AF1F136D1AD629D30DE6 /* UUDeviceVideoView.swift */,
-				0C0257534C9736E58E61B9C3C655419B /* UUMacroFle.swift */,
-				CDCCD68EF023E44DF724818F0B36FEDD /* UUSvgaAnimationCenter.swift */,
-				77D7F4C7FCB24653AA386D51B79E9882 /* Pod */,
-				79E67E633140F3DC73F82EFA496305FC /* Resources */,
-				D21A9ABF004F26BFB3DA951AD5FE3EB1 /* Support Files */,
+				2C0320961A1AED3F41D8CD833FEE24F6 /* SwiftFitSize.swift */,
+				4AADABE4A06C8DF604B8F40AC147E79B /* SwiftyPing.swift */,
+				E32A6BBEADAB766DAA7AD2D9285A5818 /* UUDeviceAudioTool.swift */,
+				3889FB48BB01727F1967A66DAB097A9F /* UUDeviceAuthorManager.swift */,
+				1221DD2E561C156B0262F7FF4B8CD4DB /* UUDeviceCheckAiPlayVioceButton.swift */,
+				3882D4817A32A48272421BAD4E5D01E0 /* UUDeviceCheckBottomView.swift */,
+				BF35821EDF96216E4B2F6FD143D53D0E /* UUDeviceCheckColorTool.swift */,
+				72C99CDA100920017DA46CD5F7FCFEEE /* UUDeviceCheckController.swift */,
+				8E20959F3A414F8242C24314321B7A54 /* UUDeviceCheckErrorCollectionCell.swift */,
+				9E3A48CC34F195D7534535E906009855 /* UUDeviceCheckFailView.swift */,
+				03CB87E787082B6A6A9E4AFF6E074C60 /* UUDeviceCheckMaicphoneView.swift */,
+				A6C6022013449F31A0478F4498D01AD2 /* UUDeviceCheckResultModel.swift */,
+				9C1A1BFB071FD8CEB111B6877ABECDAB /* UUDeviceCheckSpeakerView.swift */,
+				B0583A6D03230108D5A6FD4537F35124 /* UUDeviceCheckSuccessView.swift */,
+				227A9406A226D96370CC1B203E67E885 /* UUDeviceCheckTopView.swift */,
+				5E10CD13BBAD8F957F07AACBA3114888 /* UUDeviceCheckVideoView.swift */,
+				D1E7F63A13D9B5304DEF960BB197664A /* UUDeviceConfig.swift */,
+				3A83BA75A5C5DAE86F3679BD613DBE35 /* UUDeviceinsertErrorView.swift */,
+				CD4FD1F47AECB52795D9F77E4152685A /* UUDeviceNetworkPing.swift */,
+				403E56C219EBF4D24ADFC2C26E07103C /* UUDeviceRecord.swift */,
+				2D70E52483764C6BB7F9E197C97293EB /* UUDeviceVideoView.swift */,
+				4D8F77CB55E1D7C87FD41932EC3CBA97 /* UUMacroFle.swift */,
+				60313C57432B5C4E1F6EBB2A33A990BF /* UUNetworkReachabilityManager.swift */,
+				F536FF3A64B34741D14DAB08CDCB4A94 /* UUSvgaAnimationCenter.swift */,
+				CFB88BD5810FB1A1D9479ED043036E32 /* Pod */,
+				2D7DA938B4D0FF910C296836CD63E468 /* Resources */,
+				BB4034194B23B051E7132AE10832D087 /* Support Files */,
 			);
 			name = UUDeviceModule;
 			path = ../..;
@@ -881,24 +898,6 @@
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
-		77D7F4C7FCB24653AA386D51B79E9882 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				17DBE19C4A91DFF9FE8D08606694D731 /* LICENSE */,
-				14AC33473D0BEA7692588FD5F256079C /* README.md */,
-				3C048D4C192C1E942F498225255A02E3 /* UUDeviceModule.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		79E67E633140F3DC73F82EFA496305FC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BBD9558388F26100E3F8AB56312144D0 /* UUCheckSources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		827C37AE8799FE2ABF54F5713A1D974C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -949,14 +948,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9EECAD8EED80B64D7A14CF19DF05E924 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4E8834DA90D35BDC61E8F724616692A1 /* UUDeviceModule */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		A03291420ED2849C8F58C466C28AE568 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -969,6 +960,14 @@
 				1E9570F009ABABB667E93C9A148DB9C9 /* UUDeviceModule.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B704DE5BAF5881BE285E47E33A08D051 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A8EE68689FAC180E149D9139A24690A /* UUDeviceModule */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		B9EB707C83EDFBDA2243CE93259FBB24 /* ProtoFiles */ = {
@@ -996,11 +995,26 @@
 			path = "Target Support Files/Pods-UUDeviceModule_Tests";
 			sourceTree = "<group>";
 		};
+		BB4034194B23B051E7132AE10832D087 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C72D369A100EFE289F81CB28E5CDE505 /* UUDeviceModule.modulemap */,
+				91AFCE9B49A9816E37ED4A27F6B70163 /* UUDeviceModule-dummy.m */,
+				5BBB33D8290B014C913A9293FD2F54E1 /* UUDeviceModule-Info.plist */,
+				343836FDD2AACB9C4DBF1EA9B3DAEA5F /* UUDeviceModule-prefix.pch */,
+				956D4A83A87752FA6A4D57B66A9BBA9F /* UUDeviceModule-umbrella.h */,
+				DA51EED01A6E4AC36A2215429BC6911F /* UUDeviceModule.debug.xcconfig */,
+				AD3298BC5C91A1DEE57BEB5D98E5DA3C /* UUDeviceModule.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/UUDeviceModule";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				9EECAD8EED80B64D7A14CF19DF05E924 /* Development Pods */,
+				B704DE5BAF5881BE285E47E33A08D051 /* Development Pods */,
 				672B83BD678879FB2A8D998801364C9B /* Frameworks */,
 				03A03EE2E084D0FCD50444639075C7AA /* Pods */,
 				A03291420ED2849C8F58C466C28AE568 /* Products */,
@@ -1008,19 +1022,14 @@
 			);
 			sourceTree = "<group>";
 		};
-		D21A9ABF004F26BFB3DA951AD5FE3EB1 /* Support Files */ = {
+		CFB88BD5810FB1A1D9479ED043036E32 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				76CC262A49ABD5150EA40DA18F2FD872 /* UUDeviceModule.modulemap */,
-				81EA32B54A17C67F9168FF3FD36DB75F /* UUDeviceModule-dummy.m */,
-				F6641C6EA30D920C6E2BEF66203FB8D7 /* UUDeviceModule-Info.plist */,
-				66B00597E5D3250A677507B4E34502BC /* UUDeviceModule-prefix.pch */,
-				B9BBEF87D823C1E9C666D96AC9184007 /* UUDeviceModule-umbrella.h */,
-				25E25A7DB0B3CEE407D5B6BD9D46D4D8 /* UUDeviceModule.debug.xcconfig */,
-				C9C5F17EE59AA7C5E55A5737B50020C0 /* UUDeviceModule.release.xcconfig */,
+				E76AE7F30B619C47190B85A2B33AA7D0 /* LICENSE */,
+				1230501055A041EC87D76533F32BFF65 /* README.md */,
+				CC00E719D8F133663D44E29F19B27ED8 /* UUDeviceModule.podspec */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/UUDeviceModule";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		DAF7241AC8F537FC740DEF0BB9483D30 /* SSZipArchive */ = {
@@ -1179,19 +1188,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FEF5DA9022BD2983BEADB7827D8FD1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				253929FB02C1337BAB6F4E453F57CD40 /* UUDeviceModule-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DFCF5F12AEEED0500986DBC9BF76170 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A66ED57B365A35434C5BAF4B990819B7 /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		843838B43EFC8A972D7CBF6857C8E5B7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0AC699BF55BC8E997678D44867F12E1B /* UUDeviceModule-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1339,18 +1348,18 @@
 		};
 		F36521D822B77DC09115EEA744D601E8 /* UUDeviceModule */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AA4B05FDCE7D4E8D2C1997D22B93F26 /* Build configuration list for PBXNativeTarget "UUDeviceModule" */;
+			buildConfigurationList = D02B707D6D77A6DD277E32DB516FBBA9 /* Build configuration list for PBXNativeTarget "UUDeviceModule" */;
 			buildPhases = (
-				843838B43EFC8A972D7CBF6857C8E5B7 /* Headers */,
-				5B738BB1017FF9EFF44BEA29702BF032 /* Sources */,
-				3B7912C0B573D3AC0AFEB6831C29D167 /* Frameworks */,
-				2FBD86B064A64305692EE252FFC8D511 /* Resources */,
+				6FEF5DA9022BD2983BEADB7827D8FD1B /* Headers */,
+				A36198D26B40FCF1F28EB248A5D45D08 /* Sources */,
+				2F06E9138529BB09C1F6239E2526F599 /* Frameworks */,
+				3C1DEA9BEA397D01104B4C605CABF943 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AEFC5FE4BE8E194E1E29BFC385D9137 /* PBXTargetDependency */,
-				5ED07045A7B6545823355EA41BFB5D7A /* PBXTargetDependency */,
+				8FE2B7A74F54449EA55B2794A385F03D /* PBXTargetDependency */,
+				62760A444E18306663900B15B177C2FF /* PBXTargetDependency */,
 			);
 			name = UUDeviceModule;
 			productName = UUDeviceModule;
@@ -1423,11 +1432,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FBD86B064A64305692EE252FFC8D511 /* Resources */ = {
+		3C1DEA9BEA397D01104B4C605CABF943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A23212A3388DCD3C43D3D2599B85080 /* UUCheckSources.bundle in Resources */,
+				1E19AF00E8754832A8A89C67190AD964 /* UUCheckSources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1526,35 +1535,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B738BB1017FF9EFF44BEA29702BF032 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2C5F093B65A5FC81A1FC04D221A2C7 /* SwiftyPing.swift in Sources */,
-				F960D647E938400CC35B0D911A103EC7 /* UUDeviceAudioTool.swift in Sources */,
-				6C6E3356CE687B3EAA9D9951829F8FCD /* UUDeviceAuthorManager.swift in Sources */,
-				A4E5D0C5893F406E54369D1BFE3D1C1E /* UUDeviceCheckAiPlayVioceButton.swift in Sources */,
-				FCE872FA96B91B59C2DD8AEABC639CC6 /* UUDeviceCheckBottomView.swift in Sources */,
-				FDD6C5CECE90876B4E1BFF707EFAA75F /* UUDeviceCheckColorTool.swift in Sources */,
-				25D0CDCA921A1027CE242BE7C15B1F1E /* UUDeviceCheckController.swift in Sources */,
-				5E065C4F2CCFA6288166EA57CEEB8D51 /* UUDeviceCheckErrorCollectionCell.swift in Sources */,
-				8CA3531885332A40E3B0FC0153DC8E5A /* UUDeviceCheckFailView.swift in Sources */,
-				845CC4A668F07D2195FC772FF3EE772F /* UUDeviceCheckMaicphoneView.swift in Sources */,
-				82C8D312308BC5CEECB5B702D612C8D0 /* UUDeviceCheckResultModel.swift in Sources */,
-				907BFB1044860A9A0AD3C7322D28D881 /* UUDeviceCheckSpeakerView.swift in Sources */,
-				FA5E91425639D029A3FA94D1C8A8282A /* UUDeviceCheckSuccessView.swift in Sources */,
-				581C7452B3D85BA0B812E7ACECE4FF1D /* UUDeviceCheckTopView.swift in Sources */,
-				305298ECC6840C2665620A898AC25954 /* UUDeviceCheckVideoView.swift in Sources */,
-				A80D4B906EE293F1F70D319A375180E9 /* UUDeviceConfig.swift in Sources */,
-				0EF61EC945DB35CC8C632FB1C5A7EC55 /* UUDeviceModule-dummy.m in Sources */,
-				C373C9F97F23CA87C83296C69F4EF5F8 /* UUDeviceNetworkPing.swift in Sources */,
-				9C02F7D87AC906AAFA101FAE023899C2 /* UUDeviceRecord.swift in Sources */,
-				ACD4FE04E2AF66D5496FFE2A9E98BCDE /* UUDeviceVideoView.swift in Sources */,
-				360D796CD92C5721ABDBC4A92087C24B /* UUMacroFle.swift in Sources */,
-				E38174515F4F6863CCAB366BE3E477D6 /* UUSvgaAnimationCenter.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		89222AF845A30312C284F407BA48B98F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1599,6 +1579,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A36198D26B40FCF1F28EB248A5D45D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D7E914EB01C8736355DC94FB0A20DD /* SwiftFitSize.swift in Sources */,
+				478EAFEFB54FDB6F442D2F20AECA34F0 /* SwiftyPing.swift in Sources */,
+				227992B1CF413F0F2C53B314D2DACD26 /* UUDeviceAudioTool.swift in Sources */,
+				30196C14E51C0690520678036C3482C3 /* UUDeviceAuthorManager.swift in Sources */,
+				AF67EE9C8099FDFCD78940DE77DA7C1F /* UUDeviceCheckAiPlayVioceButton.swift in Sources */,
+				9CBADC00DC24E5310E0B0677B4C1D473 /* UUDeviceCheckBottomView.swift in Sources */,
+				7E2517E26C50F69DD26ACAA6F12A7532 /* UUDeviceCheckColorTool.swift in Sources */,
+				BD7242A3EF444F587C4DE20D2A3AE4CE /* UUDeviceCheckController.swift in Sources */,
+				0BAEB5B524128E450E95F265ECAAACB0 /* UUDeviceCheckErrorCollectionCell.swift in Sources */,
+				E16BB22B6DC11156AC810A76D0C297A2 /* UUDeviceCheckFailView.swift in Sources */,
+				D067FA20DF0589746641B2017793884A /* UUDeviceCheckMaicphoneView.swift in Sources */,
+				43E5F0B24149C126611F43B1B7B8F376 /* UUDeviceCheckResultModel.swift in Sources */,
+				9ADFC3AA981B6FFB04D124303C847173 /* UUDeviceCheckSpeakerView.swift in Sources */,
+				0BF93E1A5C11C32F4ACFB54F9F7ED882 /* UUDeviceCheckSuccessView.swift in Sources */,
+				61CC45427299BD8CCE60FADDCDDE6818 /* UUDeviceCheckTopView.swift in Sources */,
+				CD0A6C2DA8EFDEEC7011750069761AD2 /* UUDeviceCheckVideoView.swift in Sources */,
+				980345762855CB4C2793307A474F66FA /* UUDeviceConfig.swift in Sources */,
+				6B744EF7AE218BB1148E9D384DB73C00 /* UUDeviceinsertErrorView.swift in Sources */,
+				1ADC01056055B15ECA5BA84169F3C293 /* UUDeviceModule-dummy.m in Sources */,
+				6560B26C186155E8BC39820223AFD88C /* UUDeviceNetworkPing.swift in Sources */,
+				4D163D9AB6590AFDFA12E26040C44173 /* UUDeviceRecord.swift in Sources */,
+				423E8A20F9D4C7AFAE5FF5435888464D /* UUDeviceVideoView.swift in Sources */,
+				723F526877E963A1751BC0032673EC79 /* UUMacroFle.swift in Sources */,
+				9B65E1F8C0F7799565569D43C6B749C7 /* UUNetworkReachabilityManager.swift in Sources */,
+				2F8BA5953C5F3F1F5B77BBA2E9FF31BB /* UUSvgaAnimationCenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBB1A305A5BDEFC97BB331AFBEC924C7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1633,23 +1645,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2AEFC5FE4BE8E194E1E29BFC385D9137 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SVGAPlayer;
-			target = EF4EFD5BE77B99AACFB0B7ACE03D198F /* SVGAPlayer */;
-			targetProxy = 8618D1BD2FBDFF30DE37C30FF3385C8F /* PBXContainerItemProxy */;
-		};
 		4624F1BE2B3A2CA9E98F6BBB5C838884 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-UUDeviceModule_Example";
 			target = 472E4C9C36FF87680A4155AF5FF8D342 /* Pods-UUDeviceModule_Example */;
 			targetProxy = DF3F338A5F436525D93611DD8C3E055C /* PBXContainerItemProxy */;
 		};
-		5ED07045A7B6545823355EA41BFB5D7A /* PBXTargetDependency */ = {
+		62760A444E18306663900B15B177C2FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
 			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 28DF138C8662633347753E807F12C60A /* PBXContainerItemProxy */;
+			targetProxy = 895E96B692E3449759D19B3663AB6760 /* PBXContainerItemProxy */;
 		};
 		73CA24C54482112C204840BE26D61D03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1668,6 +1674,12 @@
 			name = SSZipArchive;
 			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
 			targetProxy = AC9B58C4901314CA056E46B23C542860 /* PBXContainerItemProxy */;
+		};
+		8FE2B7A74F54449EA55B2794A385F03D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SVGAPlayer;
+			target = EF4EFD5BE77B99AACFB0B7ACE03D198F /* SVGAPlayer */;
+			targetProxy = 09D3661A330498185BAD6E03405095A7 /* PBXContainerItemProxy */;
 		};
 		9398BDA18929694267B4F3F60BADD1B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1861,6 +1873,39 @@
 			};
 			name = Release;
 		};
+		47F8A1CD0E085A70ED818BB674986FF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD3298BC5C91A1DEE57BEB5D98E5DA3C /* UUDeviceModule.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UUDeviceModule/UUDeviceModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule.modulemap";
+				PRODUCT_MODULE_NAME = UUDeviceModule;
+				PRODUCT_NAME = UUDeviceModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5D4349B1E2078F3924A094163C122AE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD34D8368781938FFE93EDB0A351017A /* SSZipArchive.debug.xcconfig */;
@@ -1986,38 +2031,6 @@
 			};
 			name = Release;
 		};
-		A98B3130C3CB22AB1B7A1BA2DD6AFD31 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25E25A7DB0B3CEE407D5B6BD9D46D4D8 /* UUDeviceModule.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UUDeviceModule/UUDeviceModule-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule.modulemap";
-				PRODUCT_MODULE_NAME = UUDeviceModule;
-				PRODUCT_NAME = UUDeviceModule;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		AB8C5B2F52D805F0FBFB526E0F8B3858 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D30807CAC7DCC5101D9011089DFA9BC7 /* Protobuf.release.xcconfig */;
@@ -2142,39 +2155,6 @@
 			};
 			name = Release;
 		};
-		B65572C1DE2B8897B8C6B186591307A8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9C5F17EE59AA7C5E55A5737B50020C0 /* UUDeviceModule.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UUDeviceModule/UUDeviceModule-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule.modulemap";
-				PRODUCT_MODULE_NAME = UUDeviceModule;
-				PRODUCT_NAME = UUDeviceModule;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		BE3E68658087360FCA96F111D36C26D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 554EDF7A7E5236507456AFA95E85F355 /* Pods-UUDeviceModule_Example.debug.xcconfig */;
@@ -2243,6 +2223,38 @@
 			};
 			name = Debug;
 		};
+		E5E97B06701A3C9CD283A6EDC0EFB6B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA51EED01A6E4AC36A2215429BC6911F /* UUDeviceModule.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UUDeviceModule/UUDeviceModule-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UUDeviceModule/UUDeviceModule.modulemap";
+				PRODUCT_MODULE_NAME = UUDeviceModule;
+				PRODUCT_NAME = UUDeviceModule;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		F93AF49C1CAF2486F9DC6AE9F85C0739 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 03D46937788DC054458E212A97DFC68C /* SnapKit.debug.xcconfig */;
@@ -2283,15 +2295,6 @@
 			buildConfigurations = (
 				73CE32CE1E242DBA27C04C031911397C /* Debug */,
 				AB8C5B2F52D805F0FBFB526E0F8B3858 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1AA4B05FDCE7D4E8D2C1997D22B93F26 /* Build configuration list for PBXNativeTarget "UUDeviceModule" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A98B3130C3CB22AB1B7A1BA2DD6AFD31 /* Debug */,
-				B65572C1DE2B8897B8C6B186591307A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2337,6 +2340,15 @@
 			buildConfigurations = (
 				BE3E68658087360FCA96F111D36C26D9 /* Debug */,
 				47E4172A726BA7818178665AC0E85B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02B707D6D77A6DD277E32DB516FBBA9 /* Build configuration list for PBXNativeTarget "UUDeviceModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E97B06701A3C9CD283A6EDC0EFB6B1 /* Debug */,
+				47F8A1CD0E085A70ED818BB674986FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

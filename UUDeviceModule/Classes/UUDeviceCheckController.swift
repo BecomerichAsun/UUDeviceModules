@@ -17,7 +17,6 @@ public enum networkStatus {
 @objcMembers open class UUDeviceCheckController: UIViewController, UUNetWorkPingDelegate {
     
     var networkStatus: networkStatus = .normal
-    
     var netPingCheckManager :UUDeviceNetworkPing!
     var listener: UUNetworkReachabilityManager = UUNetworkReachabilityManager(host: "www.baidu.com")!
     var resultClosur: ((UUDeviceCheckResultModel)->())?
