@@ -172,7 +172,6 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
     
     ///暂停播放
     func pausePlayAudio() {
-        
         if player?.isPlaying ?? false {
             player?.pause()
             isPause = true

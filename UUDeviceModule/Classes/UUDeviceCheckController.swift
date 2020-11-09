@@ -35,7 +35,9 @@ public enum networkStatus {
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        SwiftyFitsize.reference(width: 812, iPadFitMultiple: 2.17)
+        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
+            SwiftyFitsize.reference(width: 812, iPadFitMultiple: 2.17)
+        }
     }
     
     required public init?(coder: NSCoder) {
@@ -246,7 +248,7 @@ public enum networkStatus {
     ///网络检测
     @discardableResult
     func netCheckHandle() -> UUDeviceCheckController {
-        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.baidu.com", pingConfig: .init(interval: 2, with: 3), delegate: self)
+        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.baidu.com", pingConfig: .init(interval: 5, with: 3), delegate: self)
         return self
     }
     
