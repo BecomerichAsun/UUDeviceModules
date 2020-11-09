@@ -351,7 +351,7 @@ extension UUDeviceCheckController{
         backgroudImageView.addSubview(topListView)
         topListView.snp.makeConstraints {
             $0.top.right.left.equalToSuperview()
-            $0.height.equalTo(32~)
+            $0.height.equalTo(32*ScreenScale)
         }
         
         backgroudImageView.addSubview(speakerView)

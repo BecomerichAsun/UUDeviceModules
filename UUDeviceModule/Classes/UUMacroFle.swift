@@ -8,8 +8,18 @@
 
 import Foundation
 
-//func (_ size: CGFloat) -> CGFloat {
-//    return size * (UIScreen.main.bounds.size.width / 1024)
+public var SSScreenHeight: CGFloat {
+    get {
+        return min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
+    }
+}
+
+public let SSScreenWidthLayout      = SSScreenHeight*1024/768.0
+
+public let ScreenScale = UIScreen.main.bounds.size.width / 779
+//
+//func screenScale(_ value: Int) -> CGFloat {
+//    return UIScreen.main.bounds.size.width / 667
 //}
 
 func uu_getBundle(forResource: String?) -> String? {

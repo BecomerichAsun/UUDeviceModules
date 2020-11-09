@@ -71,8 +71,8 @@ class UUDeviceCheckVideoView: UIView {
         self.addSubview(bouncedImageView)
         bouncedImageView.isUserInteractionEnabled = true
         bouncedImageView.snp.makeConstraints { 
-            $0.size.equalTo(CGSize(width: 519~, height: 268~))
-            $0.right.equalToSuperview().offset(-37~)
+            $0.size.equalTo(CGSize(width: 519*ScreenScale, height: 268*ScreenScale))
+            $0.right.equalToSuperview().offset(-37*ScreenScale)
             $0.centerY.equalToSuperview()
         }
         
@@ -82,7 +82,7 @@ class UUDeviceCheckVideoView: UIView {
         videoView.videoPreviewLayer.connection?.videoOrientation = .landscapeRight
         videoView.isHidden = true
         videoView.snp.makeConstraints{
-            $0.size.equalTo(CGSize(width: 135~, height: 83~))
+            $0.size.equalTo(CGSize(width: 135*ScreenScale, height: 83*ScreenScale))
             $0.right.equalTo(bouncedImageView.snp.right).offset(-32)
             $0.top.equalTo(31)
         }
@@ -99,23 +99,23 @@ class UUDeviceCheckVideoView: UIView {
         
         bouncedImageView.addSubview(leftButton)
         leftButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview().offset(-93~)
+            $0.centerX.equalToSuperview().offset(-93*ScreenScale)
             $0.bottom.equalToSuperview().offset((-40))
-            $0.size.equalTo(CGSize(width: 153~, height: 37~))
+            $0.size.equalTo(CGSize(width: 153*ScreenScale, height: 37*ScreenScale))
         }
         
         leftButton.setTitle("看不见", for: .normal)
-        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
+        leftButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
         leftButton.setTitleColor(UIColor.color(hexString: "#36AEFF"), for: .normal)
         
         bouncedImageView.addSubview(rightButton)
         rightButton.snp.makeConstraints {
             $0.bottom.size.centerY.equalTo(leftButton)
-            $0.centerX.equalToSuperview().offset(93~)
+            $0.centerX.equalToSuperview().offset(93*ScreenScale)
         }
         
         rightButton.setTitle("看得见", for: .normal)
-        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14~)
+        rightButton.titleLabel?.font = UIFont.systemFont(ofSize: 14*ScreenScale)
         rightButton.setTitleColor(UIColor.color(hexString: "#FFFFFF"), for: .normal)
         
         leftButton.addTarget(self, action: #selector(leftButtonAction), for: .touchUpInside)

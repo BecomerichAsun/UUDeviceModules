@@ -41,7 +41,7 @@ class UUDeviceCheckBottomView: UIView {
             self.addSubview(view)
             view.snp.makeConstraints {
                 $0.left.equalToSuperview().offset(CGFloat(i) * (viewW + 2))
-                $0.height.equalToSuperview().offset(1~)
+                $0.height.equalToSuperview().offset(1*ScreenScale)
                 $0.bottom.equalToSuperview()
                 $0.width.equalTo(viewW)
             }
