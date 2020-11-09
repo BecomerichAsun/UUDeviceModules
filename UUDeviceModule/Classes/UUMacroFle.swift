@@ -8,9 +8,8 @@
 
 import Foundation
 
-//func (_ size: CGFloat) -> CGFloat {
-//    return size * (UIScreen.main.bounds.size.width / 1024)
-//}
+public let ScreenScale = UIScreen.main.bounds.size.width / 779
+
 
 func uu_getBundle(forResource: String?) -> String? {
     let sdkbundle =  Bundle.init(for: UUDeviceCheckController.self)

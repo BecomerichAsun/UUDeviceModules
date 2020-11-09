@@ -182,7 +182,7 @@ extension UILabel{
     func uu_creatLable(color: String,font: CGFloat, title: String) -> UILabel {
         let lable = UILabel.init()
         lable.textColor = UIColor.color(hexString: color)
-        lable.font = UIFont.init(name: "PingFang-SC-Medium", size: font~)
+        lable.font = UIFont.init(name: "PingFang-SC-Medium", size: font*ScreenScale)
         lable.text = title
         return lable
     }
@@ -190,7 +190,7 @@ extension UILabel{
     func uu_normaleCreatLable(color: String,font: CGFloat, title: String) -> UILabel {
         let lable = UILabel.init()
         lable.textColor = UIColor.color(hexString: color)
-        lable.font = UIFont.systemFont(ofSize: font~)
+        lable.font = UIFont.systemFont(ofSize: font*ScreenScale)
         lable.text = title
         return lable
     }

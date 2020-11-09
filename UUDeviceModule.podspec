@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of UUDeviceModule.'
 
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Fix: Ipad Layout .
                        DESC
 
   s.homepage         = 'https://github.com/BecomerichAsun/UUDeviceModules'

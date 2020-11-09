@@ -87,7 +87,7 @@ class UUDeviceCheckAiPlayVioceButton: UIButton {
         }
         
         self.setTitleColor(UIColor.color(hexString: "#FFFFFF"), for: .normal)
-        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Medium", size: 13~)
+        self.titleLabel?.font = UIFont.init(name: "PingFangSC-Medium", size: 13*ScreenScale)
         
     }
 }

@@ -93,7 +93,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
             $0.height.equalTo((colloectionViewH))
         }
         self.leftButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview().offset(-93~)
+            $0.centerX.equalToSuperview().offset(-93*ScreenScale)
             if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
                 $0.bottom.equalToSuperview().offset(-40)
             } else {
@@ -104,16 +104,16 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
                 }
             }
 
-            $0.size.equalTo(CGSize(width: 153~, height: 37~))
+            $0.size.equalTo(CGSize(width: 153*ScreenScale, height: 37*ScreenScale))
         }
         self.rightButton.snp.makeConstraints {
             $0.bottom.size.centerY.equalTo(leftButton)
-            $0.centerX.equalToSuperview().offset(93~)
+            $0.centerX.equalToSuperview().offset(93*ScreenScale)
         }
         
         self.clallTeacherBtn.snp.makeConstraints {
             $0.centerY.equalTo(rightButton)
-            $0.right.equalTo(contentImageView).offset(-15~)
+            $0.right.equalTo(contentImageView).offset(-15*ScreenScale)
         }
         
         crownAnimationView.svgaPlayer.snp.makeConstraints {
@@ -170,8 +170,8 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         backGroundImageView.addSubview(contentImageView)
         contentImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 519~, height: 268~))
-            $0.right.equalToSuperview().offset(-37~)
+            $0.size.equalTo(CGSize(width: 519*ScreenScale, height: 268*ScreenScale))
+            $0.right.equalToSuperview().offset(-37*ScreenScale)
             $0.centerY.equalToSuperview()
         }
         
@@ -179,7 +179,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         logImageView.snp.makeConstraints {
             $0.centerY.equalTo(contentImageView).offset(40)
             $0.right.equalTo(contentImageView.snp.left).offset(40)
-            $0.size.equalTo(CGSize(width: 273~, height: 283~))
+            $0.size.equalTo(CGSize(width: 273*ScreenScale, height: 283*ScreenScale))
         }
         
         contentImageView.addSubview(mianTitleLable)
