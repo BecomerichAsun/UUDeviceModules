@@ -44,12 +44,11 @@ public enum networkStatus {
     
     open override func viewDidLoad() {
         super.viewDidLoad()
-        checkDeviceAuthor()
-        netCheckHandle()
-        listenNetWork()
+        checkDeviceAuthor().netCheckHandle().listenNetWork()
     }
     
-    private func listenNetWork() {
+    @discardableResult
+    private func listenNetWork() -> UUDeviceCheckController {
         self.listener.listener = { [weak self] status in
             guard let `self` = self else { return }
             switch status {
@@ -66,6 +65,7 @@ public enum networkStatus {
             }
         }
         listener.startListening()
+        return self
     }
     
     @objc func becomActive() {
