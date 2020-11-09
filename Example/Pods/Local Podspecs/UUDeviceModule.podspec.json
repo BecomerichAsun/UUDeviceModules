@@ -1,0 +1,37 @@
+{
+  "name": "UUDeviceModule",
+  "version": "0.1.0",
+  "summary": "A short description of UUDeviceModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/becomerichios@163.com/UUDeviceModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "becomerichios@163.com": "becomerichios@163.com"
+  },
+  "source": {
+    "git": "https://github.com/becomerichios@163.com/UUDeviceModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "UUDeviceModule/Classes",
+  "resources": "UUDeviceModule/UUCheckSources.bundle",
+  "frameworks": [
+    "UIKit",
+    "AVFoundation"
+  ],
+  "dependencies": {
+    "SnapKit": [
+      "~> 5.0.0"
+    ],
+    "SVGAPlayer": [
+      "2.3.5"
+    ]
+  },
+  "swift_version": "5.0"
+}

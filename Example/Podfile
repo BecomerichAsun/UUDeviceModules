@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UUDeviceModule_Example' do
+  pod 'UUDeviceModule', :path => '../'
+
+  target 'UUDeviceModule_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
