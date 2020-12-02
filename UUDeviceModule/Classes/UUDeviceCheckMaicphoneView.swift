@@ -89,9 +89,9 @@ class UUDeviceCheckMaicphoneView: UIView {
         
         self.addSubview(bouncedImageView)
         bouncedImageView.isUserInteractionEnabled = true
-        bouncedImageView.snp.makeConstraints { 
-            $0.size.equalTo(CGSize(width: 519~, height: 268~))
-            $0.right.equalToSuperview().offset(-37~)
+        bouncedImageView.snp.makeConstraints {
+            $0.size.equalTo(CGSize(width: screenPlusScale(519~), height: 268~))
+            $0.right.equalToSuperview().offset(screenPlusScale(-37~))
             $0.centerY.equalToSuperview()
         }
         
@@ -126,10 +126,10 @@ class UUDeviceCheckMaicphoneView: UIView {
         rightButton.addTarget(self, action: #selector(rightButtonAction), for: .touchUpInside)
         
         self.addSubview(logAnimationView.svgaPlayer)
-        logAnimationView.svgaPlayer.snp.makeConstraints { 
+        logAnimationView.svgaPlayer.snp.makeConstraints {
             $0.centerY.equalToSuperview().offset(-40)
             $0.left.equalToSuperview()
-            $0.size.equalTo(CGSize(width: (369), height: (400)))
+            $0.size.equalTo(CGSize(width: (isDevicePlus == false ? 369 : screenPlusScale(369)*0.8), height: (isDevicePlus == false ? 400 : screenPlusScale(400)*0.8)))
         }
         
         bouncedImageView.addSubview(notVioceLogImageView)

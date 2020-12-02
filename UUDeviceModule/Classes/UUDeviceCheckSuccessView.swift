@@ -15,6 +15,7 @@ class UUDeviceCheckSuccessView: UIView {
     lazy var resultButton = UUDeviceCheckRightButton.init(frame: .zero)
     
     var exitClosure : (()->())?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         uiConfig()
@@ -47,8 +48,8 @@ class UUDeviceCheckSuccessView: UIView {
         
         backgroundImageView.addSubview(contentImageView)
         contentImageView.snp.makeConstraints { 
-            $0.size.equalTo(CGSize(width: 519~, height: 268~))
-            $0.right.equalToSuperview().offset(-37~)
+            $0.size.equalTo(CGSize(width: screenPlusScale(519~), height: 268~))
+            $0.right.equalToSuperview().offset(screenPlusScale(-37~))
             $0.centerY.equalToSuperview()
         }
         
@@ -75,8 +76,8 @@ class UUDeviceCheckSuccessView: UIView {
         backgroundImageView.addSubview(iconImage)
         iconImage.snp.makeConstraints { 
             $0.centerY.equalTo(contentImageView).offset(40)
-            $0.right.equalTo(contentImageView.snp.left).offset(40)
-            $0.size.equalTo(CGSize(width: 273~, height: 283~))
+            $0.right.equalTo(contentImageView.snp.left).offset(screenPlusScale(40))
+            $0.size.equalTo(CGSize(width: isDevicePlus == false ? screenPlusScale(273~) : screenPlusScale(273~)*0.8, height: isDevicePlus == false ? 283~ : 0.8*283~))
         }
     }
 }

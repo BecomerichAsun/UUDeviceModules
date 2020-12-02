@@ -103,7 +103,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
                     $0.bottom.equalToSuperview().offset(-40)
                 }
             }
-
+            
             $0.size.equalTo(CGSize(width: 153~, height: 37~))
         }
         self.rightButton.snp.makeConstraints {
@@ -170,16 +170,9 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         backGroundImageView.addSubview(contentImageView)
         contentImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 519~, height: 268~))
-            $0.right.equalToSuperview().offset(-37~)
+            $0.size.equalTo(CGSize(width: screenPlusScale(519~), height: 268~))
+            $0.right.equalToSuperview().offset(screenPlusScale(-37~))
             $0.centerY.equalToSuperview()
-        }
-        
-        backGroundImageView.addSubview(logImageView)
-        logImageView.snp.makeConstraints {
-            $0.centerY.equalTo(contentImageView).offset(40)
-            $0.right.equalTo(contentImageView.snp.left).offset(40)
-            $0.size.equalTo(CGSize(width: 273~, height: 283~))
         }
         
         contentImageView.addSubview(mianTitleLable)
@@ -207,10 +200,17 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         clallTeacherBtn.setBackgroundImage(uu_image_Bundle(forResource: "clallTeacherBtn"), for: .normal)
         backGroundImageView.addSubview(clallTeacherBtn)
-
+        
         
         clallTeacherBtn.addTarget(self, action: #selector(callTeacherBtnAction), for: .touchUpInside)
         backGroundImageView.addSubview(crownAnimationView.svgaPlayer)
         crownAnimationView.setSvgaAnimationWithSvgaName(svgaName: "dcl_ai_device_check_arrowr")
+        
+        backGroundImageView.addSubview(logImageView)
+        logImageView.snp.makeConstraints {
+            $0.centerY.equalTo(contentImageView).offset(40)
+            $0.right.equalTo(contentImageView.snp.left).offset(screenPlusScale(40))
+            $0.size.equalTo(CGSize(width: isDevicePlus == false ? screenPlusScale(273~) : screenPlusScale(273~)*0.8, height: isDevicePlus == false ? 283~ : 0.8*283~))
+        }
     }
 }

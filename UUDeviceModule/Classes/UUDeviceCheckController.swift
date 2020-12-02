@@ -23,15 +23,16 @@ public enum networkStatus {
     lazy var manager = UUDeviceAuthorManager()
     lazy var bottomView = UUDeviceCheckBottomView.init(frame: .zero)
     lazy var checkResultModel = UUDeviceCheckResultModel()
+  
+    lazy var backgroudImageView = UIImageView.init(image: uu_image_Bundle(forResource: "UUCheckBackground"))
+    
     lazy var checkInsertView = UUDeviceinsertErrorView()
     lazy var topListView = UUDeviceCheckTopView.init(frame: .zero)
-    lazy var failCheckView = UUDeviceCheckFailView.init(frame: .zero)
     lazy var speakerView = UUDeviceCheckSpeakerView.init(frame: .zero)
     lazy var videoCheckView = UUDeviceCheckVideoView.init(frame: .zero)
     lazy var successCheckView = UUDeviceCheckSuccessView.init(frame: .zero)
+    lazy var failCheckView = UUDeviceCheckFailView.init(frame: .zero)
     lazy var maicphoneCheckView = UUDeviceCheckMaicphoneView.init(frame: .zero)
-    lazy var backgroudImageView = UIImageView.init(image: uu_image_Bundle(forResource: "UUCheckBackground"))
-    
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -161,13 +162,13 @@ public enum networkStatus {
                 if self.checkResultModel.maicphoneIsSuccess,self.checkResultModel.netIsSuccess,self.checkResultModel.speakerIsSuccess,self.checkResultModel.videoIsSuccess{
                     
                     self.backgroudImageView.addSubview(self.successCheckView)
-                    self.successCheckView.snp.makeConstraints { 
+                    self.successCheckView.snp.makeConstraints {
                         $0.edges.equalToSuperview()
                     }
                     self.successCheckView.startPalyVioce()
                 }else{
                     self.backgroudImageView.addSubview(self.failCheckView)
-                    self.failCheckView.snp.makeConstraints { 
+                    self.failCheckView.snp.makeConstraints {
                         $0.edges.equalToSuperview()
                     }
                     self.failCheckView.startPlayVioce()
