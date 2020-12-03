@@ -10,14 +10,22 @@ import Foundation
 
 public let ScreenScale = UIScreen.main.bounds.size.width / 779
 
-public let isDevicePlus: Bool = UIDevice.current.deviceEqualPlus
+public let isDevicePlus: Bool = UIDevice.current.deviceEqualPlus || UIDevice.current.deviceEqual667
 
-func screenPlusScale(_ input: CGFloat) -> CGFloat {
+public let isDeviceEuqal667: Bool = UIDevice.current.deviceEqual667
+
+func screenScale(_ input: CGFloat) -> CGFloat {
     if isDevicePlus {
         return 736/812*input
     }
+    if isDeviceEuqal667 {
+        print(input)
+        return 667/812*input
+    }
         return input
 }
+
+
 
 func uu_getBundle(forResource: String?) -> String? {
     let sdkbundle =  Bundle.init(for: UUDeviceCheckController.self)
@@ -50,6 +58,13 @@ extension UIDevice {
         get {
             return self.deviceVersionName.elementsEqual("iPhone 6 Plus") || self.deviceVersionName.elementsEqual("iPhone 8 Plus") ||
                 self.deviceVersionName.elementsEqual("iPhone 7 Plus")
+        }
+    }
+    
+    var deviceEqual667: Bool {
+        get {
+            return self.deviceVersionName.elementsEqual("iPhone 6") || self.deviceVersionName.elementsEqual("iPhone 6s") ||
+                self.deviceVersionName.elementsEqual("iPhone 7")
         }
     }
     

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'A short description of UUDeviceModule.'
 
 

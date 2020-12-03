@@ -71,12 +71,12 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         if self.colloectionView != nil {
             self.colloectionView?.removeFromSuperview()
         }
-        let colloectionViewH:CGFloat = self.dataArr.count > 2 ? 74: 37
+        let colloectionViewH:CGFloat = self.dataArr.count > 2 ? screenScale(74): screenScale(37)
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        flowLayout.itemSize = CGSize(width: (445/2 - 1) , height: (37))
+        flowLayout.itemSize = CGSize(width: screenScale(400/2 - 1) , height: (37))
         colloectionView = UICollectionView.init(frame: .zero, collectionViewLayout: flowLayout)
         colloectionView?.isScrollEnabled = false
         colloectionView?.dataSource = self
@@ -89,7 +89,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         self.colloectionView?.snp.makeConstraints {
             $0.top.equalTo(subLable.snp.bottom).offset(15)
             $0.left.equalTo(self.subLable)
-            $0.width.equalTo(445)
+            $0.width.equalTo(screenScale(400))
             $0.height.equalTo((colloectionViewH))
         }
         self.leftButton.snp.makeConstraints {
@@ -119,7 +119,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         crownAnimationView.svgaPlayer.snp.makeConstraints {
             $0.top.equalTo(mianTitleLable)
             $0.centerX.equalTo(clallTeacherBtn)
-            $0.size.equalTo(CGSize(width: (20), height: (10)))
+            $0.size.equalTo(CGSize(width: screenScale(20), height: screenScale(10)))
         }
         self.colloectionView?.reloadData()
     }
@@ -173,8 +173,8 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         backGroundImageView.addSubview(contentImageView)
         contentImageView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: screenPlusScale(519~), height: 268~))
-            $0.right.equalToSuperview().offset(screenPlusScale(-37~))
+            $0.size.equalTo(CGSize(width: screenScale(519~), height: 268~))
+            $0.right.equalToSuperview().offset(screenScale(-37~))
             $0.centerY.equalToSuperview()
         }
         
@@ -212,8 +212,8 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         backGroundImageView.addSubview(logImageView)
         logImageView.snp.makeConstraints {
             $0.centerY.equalTo(contentImageView).offset(40)
-            $0.right.equalTo(contentImageView.snp.left).offset(screenPlusScale(40))
-            $0.size.equalTo(CGSize(width: isDevicePlus == false ? screenPlusScale(273~) : screenPlusScale(273~)*0.8, height: isDevicePlus == false ? 283~ : 0.8*283~))
+            $0.right.equalTo(contentImageView.snp.left).offset(screenScale(40))
+            $0.size.equalTo(CGSize(width: isDevicePlus == false ? screenScale(273~) : screenScale(273~)*0.8, height: isDevicePlus == false ? 283~ : 0.8*283~))
         }
     }
 }

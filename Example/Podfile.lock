@@ -10,7 +10,7 @@ PODS:
     - SVGAPlayer/ProtoFiles
   - SVGAPlayer/ProtoFiles (2.3.5):
     - Protobuf (~> 3.4)
-  - UUDeviceModule (1.0.1):
+  - UUDeviceModule (1.0.3):
     - SnapKit (~> 5.0.0)
     - SVGAPlayer (= 2.3.5)
 
@@ -33,7 +33,7 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SVGAPlayer: bae4048710c948dc4de98971e35207d3bbed85ad
-  UUDeviceModule: 1a3e212d482aff676b54e4da12d6ae30050503b5
+  UUDeviceModule: 7af38c941471e24e09f4c594d9e7f3d0a42a3a62
 
 PODFILE CHECKSUM: 1ff25308838f25d6f84dbd24d722cbf034979c26
 
