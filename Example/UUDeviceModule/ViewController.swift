@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         vc.deviceCheckCompleteWithResultModel { (mode) in
             
         }
-
+        
         self.present(vc, animated: true, completion: nil)
     }
 }

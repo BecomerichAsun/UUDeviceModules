@@ -153,9 +153,12 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! UUDeviceCheckErrorCollectionCell
-        
         cell.setErrorItemModel(model: self.dataArr[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        UUDeviceFailDetailView.showDetailView(self.dataArr, defaultIndex: indexPath.row)
     }
     
     func uiConfig() {
