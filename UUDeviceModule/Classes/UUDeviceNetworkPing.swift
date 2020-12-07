@@ -49,6 +49,7 @@ class UUDeviceNetworkPing {
     /// 关闭Ping监测并置为空
     public func stopListenNetworkPing() {
         ping?.stopPinging()
+        ping?.haltPinging()
         ping = nil
         delegate = nil
     }
