@@ -35,10 +35,10 @@ public enum networkStatus {
     lazy var maicphoneCheckView = UUDeviceCheckMaicphoneView.init(frame: .zero)
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
             SwiftyFitsize.reference(width: 812, iPadFitMultiple: 2.17)
         }
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required public init?(coder: NSCoder) {
@@ -335,7 +335,7 @@ public enum networkStatus {
     open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
         return .landscapeRight
     }
-    
+
     open override var shouldAutorotate: Bool{
         return false
     }

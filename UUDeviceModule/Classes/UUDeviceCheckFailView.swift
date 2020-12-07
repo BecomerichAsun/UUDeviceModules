@@ -8,9 +8,13 @@
 
 import UIKit
 
-class UUDeviceCheckItmeModel: NSObject {
+struct UUDeviceCheckItmeModel {
     var title = ""
     var icon = ""
+    
+    mutating func changeTitlte(_ str: String) {
+        title = str
+    }
 }
 
 class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
@@ -42,28 +46,28 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         self.dataArr.removeAll()
         if !model.netIsSuccess {
-            let model = UUDeviceCheckItmeModel()
+            var model = UUDeviceCheckItmeModel()
             model.title = "网络"
             model.icon = "btn_net"
             self.dataArr.append(model)
         }
         
         if !model.speakerIsSuccess {
-            let model = UUDeviceCheckItmeModel()
+            var model = UUDeviceCheckItmeModel()
             model.title = "扬声器"
             model.icon = "class_state_btn_vol"
             self.dataArr.append(model)
         }
         
         if !model.videoIsSuccess {
-            let model = UUDeviceCheckItmeModel()
+            var model = UUDeviceCheckItmeModel()
             model.title = "摄像头"
             model.icon = "class_state_btn_camera"
             self.dataArr.append(model)
         }
         
         if !model.maicphoneIsSuccess {
-            let model = UUDeviceCheckItmeModel()
+            var model = UUDeviceCheckItmeModel()
             model.title = "麦克风"
             model.icon = "class_state_btn_microphone"
             self.dataArr.append(model)

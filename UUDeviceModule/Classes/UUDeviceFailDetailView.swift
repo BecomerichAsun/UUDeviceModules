@@ -51,12 +51,13 @@ class UUDeviceFailDetailView: UIView {
     init(dataArray: [UUDeviceCheckItmeModel], defaultIndex: Int) {
         super.init(frame: .zero)
         self.failDataArray = dataArray.map({ (model) in
+            var newModel = UUDeviceCheckItmeModel()
             if model.title.elementsEqual("网络") {
-                model.title = "网络差"
+                newModel.title = "网络差"
             }else {
-                model.title = model.title + "问题"
+                newModel.title = model.title + "问题"
             }
-            return model
+            return newModel
         })
         self.defaultIndex = defaultIndex
         configUI()

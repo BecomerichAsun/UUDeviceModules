@@ -17,7 +17,7 @@ import UIKit
     case force = 2
 }
 
-fileprivate let ScreenW = UIScreen.main.bounds.width
+fileprivate let ScreenW = max(UIScreen.main.bounds.width, UIScreen.main.bounds.height) 
 
 @objc public final class SwiftyFitsize: NSObject {
     static let shared = SwiftyFitsize()
@@ -53,9 +53,13 @@ fileprivate let ScreenW = UIScreen.main.bounds.width
         switch fitType {
         case .none: return value
         case .flexible:
-            return ScreenW / referenceW * value *
-                (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
-                    ? SwiftyFitsize.shared.iPadFitMultiple : 1)
+            if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
+                return ScreenW / referenceW * value *
+                    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
+                        ? SwiftyFitsize.shared.iPadFitMultiple : 1)
+            } else {
+                return value
+            }
         case .force: return ScreenW / referenceW * value
         }
     }
