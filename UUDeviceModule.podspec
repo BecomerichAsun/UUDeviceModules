@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '1.0.7'
+  s.version          = '1.0.8'
   s.summary          = 'A short description of UUDeviceModule.'
 
 
   s.description      = <<-DESC
-Fix: IphonePlus Layout .
+  1.0.7 修复杀掉App时 ping问题
                        DESC
 
   s.homepage         = 'https://github.com/BecomerichAsun/UUDeviceModules'
