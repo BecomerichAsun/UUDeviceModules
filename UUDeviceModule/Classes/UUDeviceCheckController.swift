@@ -23,6 +23,8 @@ public enum networkStatus {
     lazy var manager = UUDeviceAuthorManager()
     lazy var bottomView = UUDeviceCheckBottomView.init(frame: .zero)
     lazy var checkResultModel = UUDeviceCheckResultModel()
+    
+    lazy var record = UUDeviceRecord()
   
     lazy var backgroudImageView = UIImageView.init(image: uu_image_Bundle(forResource: "UUCheckBackground"))
     
@@ -81,7 +83,6 @@ public enum networkStatus {
     
     @discardableResult
     func handleActionEventBussiness()-> UUDeviceCheckController {
-        
         ///扬声器检测结果
         speakerView.buttonActionClosure = { [weak self] type in
             guard let `self` = self else {return}
@@ -159,7 +160,10 @@ public enum networkStatus {
                     self.resultClosur!(self.checkResultModel)
                 }
                 self.maicphoneCheckView.removeFromSuperview()
-                if self.checkResultModel.maicphoneIsSuccess,self.checkResultModel.netIsSuccess,self.checkResultModel.speakerIsSuccess,self.checkResultModel.videoIsSuccess{
+                if self.checkResultModel.maicphoneIsSuccess,
+                   self.checkResultModel.netIsSuccess,
+                   self.checkResultModel.speakerIsSuccess,
+                   self.checkResultModel.videoIsSuccess{
                     
                     self.backgroudImageView.addSubview(self.successCheckView)
                     self.successCheckView.snp.makeConstraints {
@@ -208,10 +212,15 @@ public enum networkStatus {
         return self
     }
     
+    deinit {
+        print("哈哈哈")
+    }
+    
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         netPingCheckManager.stopListenNetworkPing()
-        UUDeviceRecord.shared.stopRecord()
+        listener.stopListening()
+        record.stopRecord()
         AudioTool.instance.stopPlayAudio()
         NotificationCenter.default.removeObserver(self)
     }
@@ -226,9 +235,6 @@ public enum networkStatus {
     
     @discardableResult
     func checkDeviceAuthor() -> UUDeviceCheckController {
-        manager.authorSuccessClosure = {
-            print("设备权限打开")
-        }
         manager.showUserGotoSetOpenAuthorClosure = {[weak self] type in
             guard let `self` = self else {return}
             switch type {
@@ -256,8 +262,8 @@ public enum networkStatus {
     ///麦克风检测
     @discardableResult
     func maicphoneCheckHandle() -> UUDeviceCheckController {
-        UUDeviceRecord.shared.startRecord()
-        UUDeviceRecord.shared.recorderVolumeClosure = {[weak self] volume  in
+        record.startRecord()
+        record.recorderVolumeClosure = { [weak self] volume  in
             guard let `self` = self else {return}
             let isStartAnimation = volume > 0.4 ? true: false
             self.maicphoneCheckView.maiphoneAnimationConfig(isStartAnimation: isStartAnimation)

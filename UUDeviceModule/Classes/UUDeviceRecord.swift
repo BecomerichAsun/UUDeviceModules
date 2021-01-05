@@ -9,13 +9,13 @@ import Foundation
 import AVFoundation
 
 @objcMembers open class UUDeviceRecord : NSObject{
+    
     private var recorder:AVAudioRecorder? //录音器
-    private var player:AVAudioPlayer? //播放器
     private var recorderSeetingsDic:[String : Any]? //录音器设置参数数组
     private var volumeTimer:Timer! //定时器线程，循环监测录音的音量大小
     private var aacPath:String? //录音存储路径
-    public static let shared: UUDeviceRecord = UUDeviceRecord()
-    public  var recorderVolumeClosure :((Float)->())?
+    public var recorderVolumeClosure :((Float)->())?
+    
     override init() {
         super.init()
         createRecorder()
@@ -25,16 +25,16 @@ import AVFoundation
     public func createRecorder() -> UUDeviceRecord {
         //初始化录音器
         let session:AVAudioSession = AVAudioSession.sharedInstance()
-
-        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         
+        //设置录音类型
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         //获取Document目录
         let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                          .userDomainMask, true)[0]
         //组合录音文件路径
-        aacPath = docDir + "/play.aac"
+        aacPath = docDir + "/play\(Date.init().timeIntervalSince1970).aac"
         //初始化字典并添加设置参数
         recorderSeetingsDic =
             [
@@ -52,33 +52,39 @@ extension UUDeviceRecord {
     
     @discardableResult
     func startRecord() -> UUDeviceRecord {
-        //初始化录音器
-        recorder = try! AVAudioRecorder(url: URL(string: aacPath!)!,
-                                        settings: recorderSeetingsDic!)
-        if recorder != nil {
-            //开启仪表计数功能
-            recorder!.isMeteringEnabled = true
-            //准备录音
-            recorder!.prepareToRecord()
-            //开始录音
-            recorder!.record()
-            //启动定时器，定时更新录音音量
-            volumeTimer = Timer.scheduledTimer(timeInterval: 1, target: self,
-                                               selector: #selector(self.levelTimer),
-                                               userInfo: nil, repeats: true)
+        if recorder == nil {
+            //初始化录音器
+            recorder = try! AVAudioRecorder(url: URL(string: aacPath!)!,
+                                            settings: recorderSeetingsDic!)
+            if recorder != nil {
+                //开启仪表计数功能
+                recorder!.isMeteringEnabled = true
+                //准备录音
+                recorder!.prepareToRecord()
+                //开始录音
+                recorder!.record()
+                //启动定时器，定时更新录音音量
+                volumeTimer = Timer.scheduledTimer(timeInterval: 1, target: self,
+                                                   selector: #selector(self.levelTimer),
+                                                   userInfo: nil, repeats: true)
+            }
         }
         return self
     }
     
     func stopRecord() {
+        recorder?.pause()
         recorder?.stop()
         //录音器释放
         recorder = nil
+        
         //暂停定时器
         if volumeTimer != nil {
             volumeTimer.invalidate()
             volumeTimer = nil
         }
+        
+        recorderVolumeClosure = nil
     }
     
     //定时检测录音音量
@@ -87,8 +93,8 @@ extension UUDeviceRecord {
             recorder!.updateMeters() // 刷新音量数据
 
             var level: Float = 0
-            let minDecibels: Float = -60
-            let decibels = recorder?.averagePower(forChannel: 0) ?? 0
+            var minDecibels: Float = -60
+            var decibels = recorder?.averagePower(forChannel: 0) ?? 0
             
             if decibels<minDecibels {
                 level = 0
@@ -105,6 +111,7 @@ extension UUDeviceRecord {
                 level = powf(adjAmp, Float(1.0 / root))
             }
             if let callBack = self.recorderVolumeClosure {
+                print(level)
                 callBack(level)
             }
         }
