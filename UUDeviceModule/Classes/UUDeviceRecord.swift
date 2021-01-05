@@ -52,20 +52,22 @@ extension UUDeviceRecord {
     
     @discardableResult
     func startRecord() -> UUDeviceRecord {
-        //初始化录音器
-        recorder = try! AVAudioRecorder(url: URL(string: aacPath!)!,
-                                        settings: recorderSeetingsDic!)
-        if recorder != nil {
-            //开启仪表计数功能
-            recorder!.isMeteringEnabled = true
-            //准备录音
-            recorder!.prepareToRecord()
-            //开始录音
-            recorder!.record()
-            //启动定时器，定时更新录音音量
-            volumeTimer = Timer.scheduledTimer(timeInterval: 1, target: self,
-                                               selector: #selector(self.levelTimer),
-                                               userInfo: nil, repeats: true)
+        if recorder == nil {
+            //初始化录音器
+            recorder = try! AVAudioRecorder(url: URL(string: aacPath!)!,
+                                            settings: recorderSeetingsDic!)
+            if recorder != nil {
+                //开启仪表计数功能
+                recorder!.isMeteringEnabled = true
+                //准备录音
+                recorder!.prepareToRecord()
+                //开始录音
+                recorder!.record()
+                //启动定时器，定时更新录音音量
+                volumeTimer = Timer.scheduledTimer(timeInterval: 1, target: self,
+                                                   selector: #selector(self.levelTimer),
+                                                   userInfo: nil, repeats: true)
+            }
         }
         return self
     }
@@ -105,6 +107,7 @@ extension UUDeviceRecord {
                 level = powf(adjAmp, Float(1.0 / root))
             }
             if let callBack = self.recorderVolumeClosure {
+                print(level)
                 callBack(level)
             }
         }
