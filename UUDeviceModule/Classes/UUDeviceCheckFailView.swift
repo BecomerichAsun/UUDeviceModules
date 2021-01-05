@@ -19,19 +19,19 @@ struct UUDeviceCheckItmeModel {
 
 class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    lazy var subLable = UILabel().uu_creatLable(color: "#FFFFFF", font: 14, title: "不过没关系,你可以点击下方按钮,呼唤班主任解决帮忙解决问题哦~!")
+//    lazy var subLable = UILabel().uu_creatLable(color: "#FFFFFF", font: 14, title: "不过没关系,你可以点击下方按钮,呼唤班主任解决帮忙解决问题哦~!")
     let mianTitleLable = UILabel().uu_creatLable(color: "#FFFFFF", font: 16, title: "很遗憾,有点小问题，检测竟然没有全部通过~")
     lazy var backGroundImageView = UIImageView()
     lazy var contentImageView = UIImageView.init(image: uu_image_Bundle(forResource: "aiTestImage_testBackground"))
     lazy var logImageView = UIImageView.init(image: uu_image_Bundle(forResource: "aiTestResult_failImage"))
-    lazy var clallTeacherBtn = UIButton()
+//    lazy var clallTeacherBtn = UIButton()
     lazy var leftButton = UUDeviceCheckLeftButton.init(frame: .zero)
     lazy var rightButton = UUDeviceCheckRightButton.init(frame: .zero)
     var buttonAction: ((UUDeviceButtonType)->())?
     var callTeacherAction :(()->())?
     var dataArr = [UUDeviceCheckItmeModel]()
     var colloectionView :UICollectionView?
-    lazy var crownAnimationView = UUSvgaAnimationCenter()
+//    lazy var crownAnimationView = UUSvgaAnimationCenter()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -91,8 +91,8 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         colloectionView?.register(UUDeviceCheckErrorCollectionCell.self, forCellWithReuseIdentifier: "cell")
         contentImageView.addSubview(self.colloectionView!)
         self.colloectionView?.snp.makeConstraints {
-            $0.top.equalTo(subLable.snp.bottom).offset(15)
-            $0.left.equalTo(self.subLable)
+            $0.top.equalTo(self.mianTitleLable).offset(50)
+            $0.left.equalTo(self.mianTitleLable)
             $0.width.equalTo(screenScale(400))
             $0.height.equalTo((colloectionViewH))
         }
@@ -114,17 +114,17 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
             $0.bottom.size.centerY.equalTo(leftButton)
             $0.centerX.equalToSuperview().offset(93~)
         }
+//
+//        self.clallTeacherBtn.snp.makeConstraints {
+//            $0.centerY.equalTo(rightButton)
+//            $0.right.equalTo(contentImageView).offset(-15~)
+//        }
         
-        self.clallTeacherBtn.snp.makeConstraints {
-            $0.centerY.equalTo(rightButton)
-            $0.right.equalTo(contentImageView).offset(-15~)
-        }
-        
-        crownAnimationView.svgaPlayer.snp.makeConstraints {
-            $0.top.equalTo(mianTitleLable)
-            $0.centerX.equalTo(clallTeacherBtn)
-            $0.size.equalTo(CGSize(width: screenScale(20), height: screenScale(10)))
-        }
+//        crownAnimationView.svgaPlayer.snp.makeConstraints {
+//            $0.top.equalTo(mianTitleLable)
+//            $0.centerX.equalTo(clallTeacherBtn)
+//            $0.size.equalTo(CGSize(width: screenScale(20), height: screenScale(10)))
+//        }
         self.colloectionView?.reloadData()
     }
     
@@ -188,13 +188,13 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
             $0.top.equalToSuperview().offset((43))
         }
         
-        subLable.numberOfLines = 2
-        contentImageView.addSubview(subLable)
-        subLable.snp.makeConstraints {
-            $0.top.equalTo(mianTitleLable.snp.bottom).offset((6))
-            $0.left.equalTo(mianTitleLable)
-            $0.right.equalToSuperview().offset((-78))
-        }
+//        subLable.numberOfLines = 2
+//        contentImageView.addSubview(subLable)
+//        subLable.snp.makeConstraints {
+//            $0.top.equalTo(mianTitleLable.snp.bottom).offset((6))
+//            $0.left.equalTo(mianTitleLable)
+//            $0.right.equalToSuperview().offset((-78))
+//        }
         
         contentImageView.addSubview(leftButton)
         contentImageView.addSubview(rightButton)
@@ -205,13 +205,13 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         leftButton.setTitle("重新检测", for: .normal)
         rightButton.setTitle("退出检测", for: .normal)
         
-        clallTeacherBtn.setBackgroundImage(uu_image_Bundle(forResource: "clallTeacherBtn"), for: .normal)
-        backGroundImageView.addSubview(clallTeacherBtn)
+//        clallTeacherBtn.setBackgroundImage(uu_image_Bundle(forResource: "clallTeacherBtn"), for: .normal)
+//        backGroundImageView.addSubview(clallTeacherBtn)
         
         
-        clallTeacherBtn.addTarget(self, action: #selector(callTeacherBtnAction), for: .touchUpInside)
-        backGroundImageView.addSubview(crownAnimationView.svgaPlayer)
-        crownAnimationView.setSvgaAnimationWithSvgaName(svgaName: "dcl_ai_device_check_arrowr")
+//        clallTeacherBtn.addTarget(self, action: #selector(callTeacherBtnAction), for: .touchUpInside)
+//        backGroundImageView.addSubview(crownAnimationView.svgaPlayer)
+//        crownAnimationView.setSvgaAnimationWithSvgaName(svgaName: "dcl_ai_device_check_arrowr")
         
         backGroundImageView.addSubview(logImageView)
         logImageView.snp.makeConstraints {

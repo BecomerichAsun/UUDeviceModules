@@ -81,7 +81,6 @@ public enum networkStatus {
     
     @discardableResult
     func handleActionEventBussiness()-> UUDeviceCheckController {
-        
         ///扬声器检测结果
         speakerView.buttonActionClosure = { [weak self] type in
             guard let `self` = self else {return}
@@ -171,7 +170,7 @@ public enum networkStatus {
                     self.failCheckView.snp.makeConstraints {
                         $0.edges.equalToSuperview()
                     }
-                    self.failCheckView.startPlayVioce()
+//                    self.failCheckView.startPlayVioce()
                     self.failCheckView.analysisAccordingToThetestResults(model: self.checkResultModel)
                 }
                 self.topListView.removeFromSuperview()
