@@ -33,9 +33,9 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         super.init()
         //初始化录音器 在初始化录音器视为了解决开始卡顿的情况
         let session:AVAudioSession = AVAudioSession.sharedInstance()
+
         
-        //设置录音类型
-        try! session.setCategory(.playAndRecord)
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         

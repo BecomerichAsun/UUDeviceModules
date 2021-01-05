@@ -27,7 +27,7 @@ import AVFoundation
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         
         //设置录音类型
-        try! session.setCategory(AVAudioSession.Category.playAndRecord)
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         //获取Document目录
