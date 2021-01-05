@@ -181,7 +181,7 @@ public enum networkStatus {
         
         successCheckView.exitClosure = { [weak self] in
             guard let `self` = self else {return}
-            self.dismiss(animated: true, completion: nil)
+            self.exitDeviceCheck()
         }
         
         failCheckView.buttonAction = { [weak self] in
@@ -201,7 +201,7 @@ public enum networkStatus {
                 
                 break
             case .right:
-                self.dismiss(animated: true, completion: nil)
+                self.exitDeviceCheck()
                 break
             }
         }
@@ -259,7 +259,7 @@ public enum networkStatus {
         UUDeviceRecord.shared.startRecord()
         UUDeviceRecord.shared.recorderVolumeClosure = {[weak self] volume  in
             guard let `self` = self else {return}
-            let isStartAnimation = volume > 0.1 ? true: false
+            let isStartAnimation = volume > 0.4 ? true: false
             self.maicphoneCheckView.maiphoneAnimationConfig(isStartAnimation: isStartAnimation)
         }
         return self
@@ -342,6 +342,14 @@ public enum networkStatus {
 }
 
 extension UUDeviceCheckController{
+    
+    func exitDeviceCheck() {
+        if let _ = self.presentingViewController {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     
     @discardableResult
     func uu_UIConfig() -> UUDeviceCheckController {

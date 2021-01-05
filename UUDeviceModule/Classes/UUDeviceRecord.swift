@@ -15,7 +15,7 @@ import AVFoundation
     private var volumeTimer:Timer! //定时器线程，循环监测录音的音量大小
     private var aacPath:String? //录音存储路径
     public static let shared: UUDeviceRecord = UUDeviceRecord()
-    public  var recorderVolumeClosure :((Double)->())?
+    public  var recorderVolumeClosure :((Float)->())?
     override init() {
         super.init()
         createRecorder()
@@ -85,11 +85,27 @@ extension UUDeviceRecord {
     @objc func levelTimer() {
         if (recorder != nil) {
             recorder!.updateMeters() // 刷新音量数据
-            //            let averageV:Float = recorder!.averagePower(forChannel: 0) //获取音量的平均值
-            let maxV:Float = recorder!.peakPower(forChannel: 0) //获取音量最大值
-            let lowPassResult:Double = pow(Double(10), Double(0.05*maxV))
-            if recorderVolumeClosure != nil {
-                recorderVolumeClosure!(lowPassResult)
+
+            var level: Float = 0
+            var minDecibels: Float = -60
+            var decibels = recorder?.averagePower(forChannel: 0) ?? 0
+            
+            if decibels<minDecibels {
+                level = 0
+            }
+            else if decibels >= 0 {
+                level = 1
+            }
+            else {
+                let root = 5.0
+                let minAmp = powf(10.0, 0.05*minDecibels)
+                let inverseAmpRange = 1/(1-minAmp)
+                let amp = powf(10.0, 0.05*decibels)
+                let adjAmp = (amp - minAmp) * inverseAmpRange
+                level = powf(adjAmp, Float(1.0 / root))
+            }
+            if let callBack = self.recorderVolumeClosure {
+                callBack(level)
             }
         }
     }
