@@ -102,7 +102,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
                 $0.bottom.equalToSuperview().offset(-40)
             } else {
                 if self.dataArr.count > 2 {
-                    $0.top.equalTo(colloectionView!.snp.bottom).offset(10)
+                    $0.top.equalTo(colloectionView!.snp.bottom).offset(20)
                 } else {
                     $0.bottom.equalToSuperview().offset(-40)
                 }
@@ -114,17 +114,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
             $0.bottom.size.centerY.equalTo(leftButton)
             $0.centerX.equalToSuperview().offset(93~)
         }
-//
-//        self.clallTeacherBtn.snp.makeConstraints {
-//            $0.centerY.equalTo(rightButton)
-//            $0.right.equalTo(contentImageView).offset(-15~)
-//        }
-        
-//        crownAnimationView.svgaPlayer.snp.makeConstraints {
-//            $0.top.equalTo(mianTitleLable)
-//            $0.centerX.equalTo(clallTeacherBtn)
-//            $0.size.equalTo(CGSize(width: screenScale(20), height: screenScale(10)))
-//        }
+
         self.colloectionView?.reloadData()
     }
     
@@ -187,15 +177,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
             $0.left.equalToSuperview().offset((75))
             $0.top.equalToSuperview().offset((43))
         }
-        
-//        subLable.numberOfLines = 2
-//        contentImageView.addSubview(subLable)
-//        subLable.snp.makeConstraints {
-//            $0.top.equalTo(mianTitleLable.snp.bottom).offset((6))
-//            $0.left.equalTo(mianTitleLable)
-//            $0.right.equalToSuperview().offset((-78))
-//        }
-        
+
         contentImageView.addSubview(leftButton)
         contentImageView.addSubview(rightButton)
         
@@ -204,15 +186,7 @@ class UUDeviceCheckFailView: UIView, UICollectionViewDataSource, UICollectionVie
         
         leftButton.setTitle("重新检测", for: .normal)
         rightButton.setTitle("退出检测", for: .normal)
-        
-//        clallTeacherBtn.setBackgroundImage(uu_image_Bundle(forResource: "clallTeacherBtn"), for: .normal)
-//        backGroundImageView.addSubview(clallTeacherBtn)
-        
-        
-//        clallTeacherBtn.addTarget(self, action: #selector(callTeacherBtnAction), for: .touchUpInside)
-//        backGroundImageView.addSubview(crownAnimationView.svgaPlayer)
-//        crownAnimationView.setSvgaAnimationWithSvgaName(svgaName: "dcl_ai_device_check_arrowr")
-        
+
         backGroundImageView.addSubview(logImageView)
         logImageView.snp.makeConstraints {
             $0.centerY.equalTo(contentImageView).offset(40)

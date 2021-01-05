@@ -9,13 +9,13 @@ import Foundation
 import AVFoundation
 
 @objcMembers open class UUDeviceRecord : NSObject{
+    
     private var recorder:AVAudioRecorder? //录音器
-    private var player:AVAudioPlayer? //播放器
     private var recorderSeetingsDic:[String : Any]? //录音器设置参数数组
     private var volumeTimer:Timer! //定时器线程，循环监测录音的音量大小
     private var aacPath:String? //录音存储路径
-    public static let shared: UUDeviceRecord = UUDeviceRecord()
-    public  var recorderVolumeClosure :((Float)->())?
+    public var recorderVolumeClosure :((Float)->())?
+    
     override init() {
         super.init()
         createRecorder()
@@ -34,7 +34,7 @@ import AVFoundation
         let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory,
                                                          .userDomainMask, true)[0]
         //组合录音文件路径
-        aacPath = docDir + "/play.aac"
+        aacPath = docDir + "/play\(Date.init().timeIntervalSince1970).aac"
         //初始化字典并添加设置参数
         recorderSeetingsDic =
             [
@@ -73,14 +73,18 @@ extension UUDeviceRecord {
     }
     
     func stopRecord() {
+        recorder?.pause()
         recorder?.stop()
         //录音器释放
         recorder = nil
+        
         //暂停定时器
         if volumeTimer != nil {
             volumeTimer.invalidate()
             volumeTimer = nil
         }
+        
+        recorderVolumeClosure = nil
     }
     
     //定时检测录音音量
