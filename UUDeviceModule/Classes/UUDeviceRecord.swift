@@ -25,10 +25,7 @@ import AVFoundation
     public func createRecorder() -> UUDeviceRecord {
         //初始化录音器
         let session:AVAudioSession = AVAudioSession.sharedInstance()
-        
-        //设置录音类型
-        try! session.setCategory(AVAudioSession.Category.playAndRecord)
-        
+
         try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         
         //设置支持后台

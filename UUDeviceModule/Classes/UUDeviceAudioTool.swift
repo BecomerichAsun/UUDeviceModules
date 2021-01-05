@@ -34,9 +34,6 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         //初始化录音器 在初始化录音器视为了解决开始卡顿的情况
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         
-        //设置录音类型
-        try! session.setCategory(.playAndRecord)
-        
         try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         
         //设置支持后台
@@ -157,10 +154,8 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         }
         //初始化录音器 在初始化录音器视为了解决开始卡顿的情况
         let session:AVAudioSession = AVAudioSession.sharedInstance()
-        //设置录音类型
-        try! session.setCategory(.playback)
-        
-        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
+      
+        try! session.setCategory(.playback, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: localUrl))
