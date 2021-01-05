@@ -87,8 +87,8 @@ extension UUDeviceRecord {
             recorder!.updateMeters() // 刷新音量数据
 
             var level: Float = 0
-            var minDecibels: Float = -60
-            var decibels = recorder?.averagePower(forChannel: 0) ?? 0
+            let minDecibels: Float = -60
+            let decibels = recorder?.averagePower(forChannel: 0) ?? 0
             
             if decibels<minDecibels {
                 level = 0
