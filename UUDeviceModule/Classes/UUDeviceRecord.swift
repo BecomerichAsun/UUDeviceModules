@@ -111,7 +111,6 @@ extension UUDeviceRecord {
                 level = powf(adjAmp, Float(1.0 / root))
             }
             if let callBack = self.recorderVolumeClosure {
-                print(level)
                 callBack(level)
             }
         }

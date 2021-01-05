@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0'
   s.summary          = 'A short description of UUDeviceModule.'
 
 
   s.description      = <<-DESC
-  1.0.7 修复杀掉App时 ping问题
+  移除 打印文件
                        DESC
 
   s.homepage         = 'https://github.com/BecomerichAsun/UUDeviceModules'

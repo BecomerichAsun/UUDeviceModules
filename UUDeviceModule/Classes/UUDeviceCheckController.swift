@@ -212,10 +212,7 @@ public enum networkStatus {
         return self
     }
     
-    deinit {
-        print("哈哈哈")
-    }
-    
+
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         netPingCheckManager.stopListenNetworkPing()
