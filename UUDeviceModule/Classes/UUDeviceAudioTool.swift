@@ -36,6 +36,9 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         
         //设置录音类型
         try! session.setCategory(.playAndRecord)
+        
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
+        
         //设置支持后台
         try! session.setActive(true)
         
@@ -156,6 +159,8 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         //设置录音类型
         try! session.setCategory(.playback)
+        
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: localUrl))
