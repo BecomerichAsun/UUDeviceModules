@@ -44,11 +44,22 @@ import AVFoundation
                 AVEncoderBitRateKey : 320000,
                 AVSampleRateKey : 44100.0 //录音器每秒采集的录音样本数
             ]
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForegroundNotification), name:UIApplication.willEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterBackgroundNotification), name: UIApplication.didEnterBackgroundNotification, object: nil)
         return self
     }
 }
 
 extension UUDeviceRecord {
+    
+    @objc func appWillEnterForegroundNotification() {
+        self.relayRecord()
+    }
+    
+    @objc func appWillEnterBackgroundNotification() {
+        self.pauseRecord()
+    }
     
     @discardableResult
     func startRecord() -> UUDeviceRecord {
@@ -72,6 +83,14 @@ extension UUDeviceRecord {
         return self
     }
     
+    func pauseRecord() {
+        recorder?.pause()
+    }
+    
+    func relayRecord() {
+        recorder?.record()
+    }
+    
     func stopRecord() {
         recorder?.pause()
         recorder?.stop()
@@ -93,8 +112,8 @@ extension UUDeviceRecord {
             recorder!.updateMeters() // 刷新音量数据
 
             var level: Float = 0
-            var minDecibels: Float = -60
-            var decibels = recorder?.averagePower(forChannel: 0) ?? 0
+            let minDecibels: Float = -60
+            let decibels = recorder?.averagePower(forChannel: 0) ?? 0
             
             if decibels<minDecibels {
                 level = 0

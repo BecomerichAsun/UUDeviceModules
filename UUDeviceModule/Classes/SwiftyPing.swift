@@ -461,7 +461,9 @@ public class SwiftyPing: NSObject {
     /// - Parameter resetSequence: Controls whether the sequence index should be set back to zero.
     public func haltPinging(resetSequence: Bool = true) {
         stopPinging(resetSequence: resetSequence)
-        CFRunLoopSourceInvalidate(socketSource)
+        if let socketSources = self.socketSource {
+            CFRunLoopSourceInvalidate(socketSources)
+        }
         socketSource = nil
         socket = nil
     }

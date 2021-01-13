@@ -54,11 +54,9 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
     }
     
     @objc func appWillEnterForegroundNotification(){
-        
         if isPause {
             self.continueToPlay()
         }
-        
     }
     
     @objc func appWillEnterBackgroundNotification(){
@@ -155,7 +153,7 @@ class AudioTool: NSObject , AVAudioPlayerDelegate {
         //初始化录音器 在初始化录音器视为了解决开始卡顿的情况
         let session:AVAudioSession = AVAudioSession.sharedInstance()
       
-        try! session.setCategory(.playback, options: [.allowBluetooth,.defaultToSpeaker])
+        try! session.setCategory(.playAndRecord, options: [.allowBluetooth,.defaultToSpeaker])
         //设置支持后台
         try! session.setActive(true)
         player = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: localUrl))

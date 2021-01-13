@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '1.2.0'
+  s.version          = '1.2.1'
   s.summary          = 'A short description of UUDeviceModule.'
 
 
   s.description      = <<-DESC
-  移除 打印文件
+  Fix 录音问题
                        DESC
 
   s.homepage         = 'https://github.com/BecomerichAsun/UUDeviceModules'
