@@ -300,7 +300,7 @@ public enum networkStatus {
             title = "麦克风权限未开启"
             break
         }
-        let vc = UIAlertController(title: title, message: "无法进行设备检测", preferredStyle: .alert)
+        let vc = UUAlert(title: title, message: "无法进行设备检测", preferredStyle: .alert)
         let canceAction = UIAlertAction(title: "取消", style: .cancel) { _ in
             if self.navigationController == nil{
                 self.dismiss(animated: true, completion: nil)
@@ -338,7 +338,6 @@ public enum networkStatus {
     open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
         return .landscapeRight
     }
-
     open override var shouldAutorotate: Bool{
         return false
     }
@@ -380,5 +379,19 @@ extension UUDeviceCheckController{
         topListView.speakerTexting()
         bottomView.bottomViewProgressConfig(1)
         return self
+    }
+}
+
+class UUAlert : UIAlertController {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override var shouldAutorotate: Bool {
+        return false
     }
 }
