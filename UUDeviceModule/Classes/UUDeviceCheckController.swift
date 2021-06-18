@@ -58,7 +58,7 @@ public enum networkStatus {
             guard let `self` = self else { return }
             switch status {
             case .notReachable:
-                self.netPingCheckManager.pauseListenNetworkPing()
+                self.netPingCheckManager.stopListenNetworkPing()
                 self.topListView.netCheckResult(title: "网络: 未连接", isSuccess: false)
                 self.networkStatus = .noNetwork
             case .reachable(.ethernetOrWiFi),.reachable(.wwan):
@@ -73,14 +73,7 @@ public enum networkStatus {
         return self
     }
     
-    @objc func becomActive() {
-        self.netPingCheckManager.startListenNetworkPing()
-    }
-    
-    @objc func willResign() {
-        self.netPingCheckManager.pauseListenNetworkPing()
-    }
-    
+
     @discardableResult
     func handleActionEventBussiness()-> UUDeviceCheckController {
         ///扬声器检测结果
@@ -216,6 +209,7 @@ public enum networkStatus {
     open override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         netPingCheckManager.stopListenNetworkPing()
+        netPingCheckManager.delegate = nil
         listener.stopListening()
         record.stopRecord()
         AudioTool.instance.stopPlayAudio()
@@ -252,7 +246,7 @@ public enum networkStatus {
     ///网络检测
     @discardableResult
     func netCheckHandle() -> UUDeviceCheckController {
-        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.baidu.com", pingConfig: .init(interval: 5, with: 3), delegate: self)
+        netPingCheckManager = UUDeviceNetworkPing.init(host: "www.baidu.com", pingConfig: .init(interval: 2, with: 5), delegate: self)
         return self
     }
     
@@ -276,12 +270,12 @@ public enum networkStatus {
         if response.error == PingError.requestTimeout{
             isNetSucess = false
             title = "网络: 超时"
-        }else if  Int((response.duration ?? 0) * 1000) > 250 {
+        }else if  Int((response.duration) * 1000) > 250 {
             isNetSucess = false
-            title = "网络: \(Int((response.duration ?? 0) * 1000))ms"
+            title = "网络: \(Int((response.duration) * 1000))ms"
         }else{
             isNetSucess = true
-            title = "网络: \(Int((response.duration ?? 0) * 1000))ms"
+            title = "网络: \(Int((response.duration) * 1000))ms"
         }
         self.checkResultModel.netIsSuccess = isNetSucess
         DispatchQueue.main.async { [weak self] in

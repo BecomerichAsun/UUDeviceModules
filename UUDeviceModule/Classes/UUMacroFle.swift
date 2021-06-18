@@ -32,7 +32,7 @@ func screenScale(_ input: CGFloat) -> CGFloat {
 
 
 func uu_getBundle(forResource: String?) -> String? {
-    let sdkbundle =  Bundle.init(for: UUDeviceCheckController.self)
+    let sdkbundle = Bundle.init(for: UUDeviceCheckController.self)
     let bundlePath = sdkbundle.url(forResource: "UUCheckSources", withExtension: "bundle")
     let relBundle = Bundle.init(url: bundlePath!)
     return relBundle?.path(forResource: forResource, ofType: nil)

@@ -14,6 +14,7 @@ import UIKit
 #endif
 
 public typealias Observer = ((_ response: PingResponse) -> Void)
+public typealias FinishedCallback = ((_ result: PingResult) -> Void)
 
 /// Represents a ping delegate.
 public protocol PingDelegate {
@@ -42,7 +43,7 @@ public enum PingError: Error, Equatable {
     /// Response `identifier` doesn't match what was sent.
     case identifierMismatch(received: UInt16, expected: UInt16)
     /// Response `sequenceNumber` doesn't match.
-    case invalidSequenceIndex(received: Int, expected: Int)
+    case invalidSequenceIndex(received: UInt16, expected: UInt16)
     
     // Host resolve errors
     /// Unknown error occured within host lookup.
@@ -81,7 +82,7 @@ public enum PingError: Error, Equatable {
 
 /// Class representing socket info, which contains a `SwiftyPing` instance and the identifier.
 public class SocketInfo {
-    public let pinger: SwiftyPing
+    public weak var pinger: SwiftyPing?
     public let identifier: UInt16
     
     public init(pinger: SwiftyPing, identifier: UInt16) {
@@ -95,19 +96,19 @@ public class SwiftyPing: NSObject {
     /// Describes the ping host destination.
     public struct Destination {
         /// The host name, can be a IP address or a URL.
-        let host: String
+        public let host: String
         /// IPv4 address of the host.
-        let ipv4Address: Data
+        public let ipv4Address: Data
         /// Socket address of `ipv4Address`.
-        var socketAddress: sockaddr_in? { return ipv4Address.socketAddressInternet }
+        public var socketAddress: sockaddr_in? { return ipv4Address.socketAddressInternet }
         /// IP address of the host.
-        var ip: String? {
+        public var ip: String? {
             guard let address = socketAddress else { return nil }
             return String(cString: inet_ntoa(address.sin_addr), encoding: .ascii)
         }
         
         /// Resolves the `host`.
-        static func getIPv4AddressFromHost(host: String) throws -> Data {
+        public static func getIPv4AddressFromHost(host: String) throws -> Data {
             var streamError = CFStreamError()
             let cfhost = CFHostCreateWithName(nil, host as CFString).takeRetainedValue()
             let status = CFHostStartInfoResolution(cfhost, .addresses, &streamError)
@@ -149,11 +150,19 @@ public class SwiftyPing: NSObject {
     public let configuration: PingConfiguration
     /// This closure gets called with ping responses.
     public var observer: Observer?
+    /// This closure gets called when pinging stops, either when `targetCount` is reached or pinging is stopped explicitly with `stop()` or `halt()`.
+    public var finished: FinishedCallback?
     /// This delegate gets called with ping responses.
     public var delegate: PingDelegate?
-    /// The number of pings to $0. Default is `nil`, which means no limit.
+    /// The number of pings to make. Default is `nil`, which means no limit.
     public var targetCount: Int?
 
+    /// The current ping count, starting from 0.
+    public var currentCount: UInt64 {
+        return trueSequenceIndex
+    }
+    /// Array of all ping responses sent to the `observer`.
+    public private(set) var responses: [PingResponse] = []
     /// A random identifier which is a part of the ping request.
     private let identifier = UInt16.random(in: 0..<UInt16.max)
     /// A random UUID fingerprint sent as the payload.
@@ -165,20 +174,33 @@ public class SwiftyPing: NSObject {
     private var socket: CFSocket?
     /// Socket source
     private var socketSource: CFRunLoopSource?
+    /// An unmanaged instance of `SocketInfo` used in the current socket's callback. This must be released manually, otherwise it will leak.
+    private var unmanagedSocketInfo: Unmanaged<SocketInfo>?
     
     /// When the current request was sent.
-    private var sequenceStart: Date?
+    private var sequenceStart = Date()
     /// The current sequence number.
-    private var _sequenceIndex = 0
-    private var sequenceIndex: Int {
+    private var _sequenceIndex: UInt16 = 0
+    private var sequenceIndex: UInt16 {
         get {
-            _serial.sync { self._sequenceIndex }
+            _serial_property.sync { self._sequenceIndex }
         }
         set {
-            _serial.sync { self._sequenceIndex = newValue }
+            _serial_property.sync { self._sequenceIndex = newValue }
+        }
+    }
+    /// The true sequence number.
+    private var _trueSequenceIndex: UInt64 = 0
+    private var trueSequenceIndex: UInt64 {
+        get {
+            _serial_property.sync { self._trueSequenceIndex }
+        }
+        set {
+            _serial_property.sync { self._trueSequenceIndex = newValue }
         }
     }
     
+    private var erroredIndices = [Int]()
     /// Initializes a pinger.
     /// - Parameter destination: Specifies the host.
     /// - Parameter configuration: A configuration object which can be used to customize pinging behavior.
@@ -201,9 +223,8 @@ public class SwiftyPing: NSObject {
     #if os(iOS)
     /// Adds notification observers for iOS app state changes.
     private func addAppStateNotifications() {
-
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didEnterForeground), name:  UIApplication.didBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didEnterForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
     
     /// A flag to determine whether the pinger was halted automatically by an app state change.
@@ -253,43 +274,63 @@ public class SwiftyPing: NSObject {
     /// Initializes a CFSocket.
     /// - Throws: If setting a socket options flag fails, throws a `PingError.socketOptionsSetError(:)`.
     private func createSocket() throws {
-        // Create a socket context...
-        let info = SocketInfo(pinger: self, identifier: identifier)
-        var context = CFSocketContext(version: 0, info: Unmanaged.passRetained(info).toOpaque(), retain: nil, release: nil, copyDescription: nil)
+        try _serial.sync {
+            // Create a socket context...
+            let info = SocketInfo(pinger: self, identifier: identifier)
+            unmanagedSocketInfo = Unmanaged.passRetained(info)
+            var context = CFSocketContext(version: 0, info: unmanagedSocketInfo!.toOpaque(), retain: nil, release: nil, copyDescription: nil)
 
-        // ...and a socket...
-        socket = CFSocketCreate(kCFAllocatorDefault, AF_INET, SOCK_DGRAM, IPPROTO_ICMP, CFSocketCallBackType.dataCallBack.rawValue, { socket, type, address, data, info in
-            // Socket callback closure
-            guard let socket = socket, let info = info, let data = data else { return }
-            let socketInfo = Unmanaged<SocketInfo>.fromOpaque(info).takeUnretainedValue()
-            let ping = socketInfo.pinger
-            if (type as CFSocketCallBackType) == CFSocketCallBackType.dataCallBack {
-                let cfdata = Unmanaged<CFData>.fromOpaque(data).takeUnretainedValue()
-                ping.socket(socket: socket, didReadData: cfdata as Data)
+            // ...and a socket...
+            socket = CFSocketCreate(kCFAllocatorDefault, AF_INET, SOCK_DGRAM, IPPROTO_ICMP, CFSocketCallBackType.dataCallBack.rawValue, { socket, type, address, data, info in
+                // Socket callback closure
+                guard let socket = socket, let info = info, let data = data else { return }
+                let socketInfo = Unmanaged<SocketInfo>.fromOpaque(info).takeUnretainedValue()
+                let ping = socketInfo.pinger
+                if (type as CFSocketCallBackType) == CFSocketCallBackType.dataCallBack {
+                    let cfdata = Unmanaged<CFData>.fromOpaque(data).takeUnretainedValue()
+                    ping?.socket(socket: socket, didReadData: cfdata as Data)
+                }
+            }, &context)
+            
+            // Disable SIGPIPE, see issue #15 on GitHub.
+            let handle = CFSocketGetNative(socket)
+            var value: Int32 = 1
+            let err = setsockopt(handle, SOL_SOCKET, SO_NOSIGPIPE, &value, socklen_t(MemoryLayout.size(ofValue: value)))
+            guard err == 0 else {
+                throw PingError.socketOptionsSetError(err: err)
             }
             
-        }, &context)
-        
-        // Disable SIGPIPE, see issue #15 on GitHub.
-        let handle = CFSocketGetNative(socket)
-        var value: Int32 = 1
-        let err = setsockopt(handle, SOL_SOCKET, SO_NOSIGPIPE, &value, socklen_t(MemoryLayout.size(ofValue: value)))
-        guard err == 0 else {
-            throw PingError.socketOptionsSetError(err: err)
+            // Set TTL
+            if var ttl = configuration.timeToLive {
+                let err = setsockopt(handle, IPPROTO_IP, IP_TTL, &ttl, socklen_t(MemoryLayout.size(ofValue: ttl)))
+                guard err == 0 else {
+                    throw PingError.socketOptionsSetError(err: err)
+                }
+            }
+            
+            // ...and add it to the main run loop.
+            socketSource = CFSocketCreateRunLoopSource(nil, socket, 0)
+            CFRunLoopAddSource(CFRunLoopGetMain(), socketSource, .commonModes)
         }
-        
-        // ...and add it to the main run loop.
-        socketSource = CFSocketCreateRunLoopSource(nil, socket, 0)
-        CFRunLoopAddSource(CFRunLoopGetMain(), socketSource, .commonModes)
     }
 
     // MARK: - Tear-down
-    deinit {
-        CFRunLoopSourceInvalidate(socketSource)
-        socketSource = nil
-        socket = nil
+    private func tearDown() {
+        if socketSource != nil {
+            CFRunLoopSourceInvalidate(socketSource)
+            socketSource = nil
+        }
+        if socket != nil {
+            CFSocketInvalidate(socket)
+            socket = nil
+        }
+        unmanagedSocketInfo?.release()
+        unmanagedSocketInfo = nil
         timeoutTimer?.invalidate()
         timeoutTimer = nil
+    }
+    deinit {
+        tearDown()
     }
 
     // MARK: - Single ping
@@ -297,20 +338,20 @@ public class SwiftyPing: NSObject {
     private var _isPinging = false
     private var isPinging: Bool {
         get {
-            return _serial.sync { self._isPinging }
+            return _serial_property.sync { self._isPinging }
         }
         set {
-            _serial.sync { self._isPinging = newValue }
+            _serial_property.sync { self._isPinging = newValue }
         }
     }
 
     private var _timeoutTimer: Timer?
     private var timeoutTimer: Timer? {
         get {
-            return _serial.sync { self._timeoutTimer }
+            return _serial_property.sync { self._timeoutTimer }
         }
         set {
-            _serial.sync { self._timeoutTimer = newValue }
+            _serial_property.sync { self._timeoutTimer = newValue }
         }
     }
         
@@ -325,7 +366,7 @@ public class SwiftyPing: NSObject {
         RunLoop.main.add(timer, forMode: .common)
         self.timeoutTimer = timer
 
-        currentQueue.async {
+        _serial.async {
             let address = self.destination.ipv4Address
             do {
                 let icmpPackage = try self.createICMPPackage(identifier: UInt16(self.identifier), sequenceNumber: UInt16(self.sequenceIndex))
@@ -344,10 +385,13 @@ public class SwiftyPing: NSObject {
                     let response = PingResponse(identifier: self.identifier,
                                                 ipAddress: self.destination.ip,
                                                 sequenceNumber: self.sequenceIndex,
+                                                trueSequenceNumber: self.trueSequenceIndex,
                                                 duration: self.timeIntervalSinceStart,
                                                 error: error,
                                                 byteCount: nil,
                                                 ipHeader: nil)
+                   
+                    self.erroredIndices.append(Int(self.sequenceIndex))
                     self.isPinging = false
                     self.informObserver(of: response)
                     
@@ -363,10 +407,12 @@ public class SwiftyPing: NSObject {
                 let response = PingResponse(identifier: self.identifier,
                                             ipAddress: self.destination.ip,
                                             sequenceNumber: self.sequenceIndex,
+                                            trueSequenceNumber: self.trueSequenceIndex,
                                             duration: self.timeIntervalSinceStart,
                                             error: pingError,
                                             byteCount: nil,
                                             ipHeader: nil)
+                self.erroredIndices.append(Int(self.sequenceIndex))
                 self.isPinging = false
                 self.informObserver(of: response)
                 
@@ -375,11 +421,8 @@ public class SwiftyPing: NSObject {
         }
     }
     
-    private var timeIntervalSinceStart: TimeInterval? {
-        if let start = sequenceStart {
-            return Date().timeIntervalSince(start)
-        }
-        return nil
+    private var timeIntervalSinceStart: TimeInterval {
+        return Date().timeIntervalSince(sequenceStart)
     }
 
     @objc private func timeout() {
@@ -387,10 +430,13 @@ public class SwiftyPing: NSObject {
         let response = PingResponse(identifier: self.identifier,
                                     ipAddress: self.destination.ip,
                                     sequenceNumber: self.sequenceIndex,
+                                    trueSequenceNumber: self.trueSequenceIndex,
                                     duration: timeIntervalSinceStart,
                                     error: error,
                                     byteCount: nil,
                                     ipHeader: nil)
+        
+        erroredIndices.append(Int(sequenceIndex))
         self.isPinging = false
         informObserver(of: response)
 
@@ -399,6 +445,7 @@ public class SwiftyPing: NSObject {
     }
     
     private func informObserver(of response: PingResponse) {
+        responses.append(response)
         if killswitch { return }
         currentQueue.sync {
             self.observer?(response)
@@ -408,33 +455,63 @@ public class SwiftyPing: NSObject {
     
     // MARK: - Continuous ping
     
-    private func shouldSchedulePing() -> Bool {
-        if killswitch { return false }
+    private func isTargetCountReached() -> Bool {
         if let target = targetCount {
-            if sequenceIndex < target {
+            if sequenceIndex >= target {
                 return true
             }
-            return false
         }
+        return false
+    }
+    
+    private func shouldSchedulePing() -> Bool {
+        if killswitch { return false }
+        if isTargetCountReached() { return false }
         return true
     }
     private func scheduleNextPing() {
+        if isTargetCountReached() {
+            if configuration.haltAfterTarget {
+                haltPinging()
+            } else {
+                informFinishedStatus(trueSequenceIndex)
+            }
+        }
         if shouldSchedulePing() {
-            currentQueue.asyncAfter(deadline: .now() + configuration.pingInterval) {
+            _serial.asyncAfter(deadline: .now() + configuration.pingInterval) {
                 self.sendPing()
             }
         }
     }
+    private func informFinishedStatus(_ sequenceIndex: UInt64) {
+        if let callback = finished {
+            var roundtrip: PingResult.Roundtrip? = nil
+            let roundtripTimes = responses.filter { $0.error == nil }.map { $0.duration }
+            if roundtripTimes.count != 0, let min = roundtripTimes.min(), let max = roundtripTimes.max() {
+                let count = Double(roundtripTimes.count)
+                let total = roundtripTimes.reduce(0, +)
+                let avg = total / count
+                let variance = roundtripTimes.reduce(0, { $0 + ($1 - avg) * ($1 - avg) })
+                let stddev = sqrt(variance / count)
+                
+                roundtrip = PingResult.Roundtrip(minimum: min, maximum: max, average: avg, standardDeviation: stddev)
+            }
+            
+            let result = PingResult(responses: responses, packetsTransmitted: sequenceIndex, packetsReceived: UInt64(roundtripTimes.count), roundtrip: roundtrip)
+            callback(result)
+        }
+    }
     
     private let _serial = DispatchQueue(label: "SwiftyPing internal")
-    
+    private let _serial_property = DispatchQueue(label: "SwiftyPing internal property")
+
     private var _killswitch = false
     private var killswitch: Bool {
         get {
-            return _serial.sync { self._killswitch }
+            return _serial_property.sync { self._killswitch }
         }
         set {
-            _serial.sync { self._killswitch = newValue }
+            _serial_property.sync { self._killswitch = newValue }
         }
     }
     
@@ -452,35 +529,38 @@ public class SwiftyPing: NSObject {
     public func stopPinging(resetSequence: Bool = true) {
         killswitch = true
         isPinging = false
+        let count = trueSequenceIndex
         if resetSequence {
             sequenceIndex = 0
-            sequenceStart = nil
+            trueSequenceIndex = 0
+            erroredIndices.removeAll()
         }
+        informFinishedStatus(count)
     }
     /// Stops pinging the host and destroys the CFSocket object.
     /// - Parameter resetSequence: Controls whether the sequence index should be set back to zero.
     public func haltPinging(resetSequence: Bool = true) {
         stopPinging(resetSequence: resetSequence)
-        if let socketSources = self.socketSource {
-            CFRunLoopSourceInvalidate(socketSources)
-        }
-        socketSource = nil
-        socket = nil
+        tearDown()
     }
     
     private func incrementSequenceIndex() {
         // Handle overflow gracefully
-        if sequenceIndex >= Int.max {
+        if sequenceIndex >= UInt16.max {
             sequenceIndex = 0
         } else {
             sequenceIndex += 1
+        }
+        
+        if trueSequenceIndex >= UInt64.max {
+            trueSequenceIndex = 0
+        } else {
+            trueSequenceIndex += 1
         }
     }
     
     // MARK: - Socket callback
     private func socket(socket: CFSocket, didReadData data: Data?) {
-        timeoutTimer?.invalidate()
-        
         if killswitch { return }
         
         guard let data = data else { return }
@@ -494,6 +574,8 @@ public class SwiftyPing: NSObject {
         } catch {
             print("Unhandled error thrown: \(error)")
         }
+        
+        timeoutTimer?.invalidate()
         var ipHeader: IPHeader? = nil
         if validationError == nil {
             ipHeader = data.withUnsafeBytes({ $0.load(as: IPHeader.self) })
@@ -501,6 +583,7 @@ public class SwiftyPing: NSObject {
         let response = PingResponse(identifier: identifier,
                                     ipAddress: destination.ip,
                                     sequenceNumber: sequenceIndex,
+                                    trueSequenceNumber: trueSequenceIndex,
                                     duration: timeIntervalSinceStart,
                                     error: validationError,
                                     byteCount: data.count,
@@ -523,17 +606,23 @@ public class SwiftyPing: NSObject {
                                 sequenceNumber: CFSwapInt16HostToBig(sequenceNumber),
                                 payload: fingerprint.uuid)
                 
-        let checksum = try computeChecksum(header: header)
+        let delta = configuration.payloadSize - MemoryLayout<uuid_t>.size
+        var additional = [UInt8]()
+        if delta > 0 {
+            additional = (0..<delta).map { _ in UInt8.random(in: UInt8.min...UInt8.max) }
+        }
+
+        let checksum = try computeChecksum(header: header, additionalPayload: additional)
         header.checksum = checksum
         
-        let package = Data(bytes: &header, count: MemoryLayout<ICMPHeader>.size)
+        let package = Data(bytes: &header, count: MemoryLayout<ICMPHeader>.size) + Data(additional)
         return package
     }
     
-    private func computeChecksum(header: ICMPHeader) throws -> UInt16 {
+    private func computeChecksum(header: ICMPHeader, additionalPayload: [UInt8]) throws -> UInt16 {
         let typecode = Data([header.type, header.code]).withUnsafeBytes { $0.load(as: UInt16.self) }
         var sum = UInt64(typecode) + UInt64(header.identifier) + UInt64(header.sequenceNumber)
-        let payload = convert(payload: header.payload)
+        let payload = convert(payload: header.payload) + additionalPayload
         
         guard payload.count % 2 == 0 else { throw PingError.unexpectedPayloadLength }
         
@@ -577,7 +666,9 @@ public class SwiftyPing: NSObject {
         }
                 
         guard let headerOffset = icmpHeaderOffset(of: data) else { throw PingError.invalidHeaderOffset }
+        let payloadSize = data.count - headerOffset - MemoryLayout<ICMPHeader>.size
         let icmpHeader = data.withUnsafeBytes({ $0.load(fromByteOffset: headerOffset, as: ICMPHeader.self) })
+        let payload = data.subdata(in: (data.count - payloadSize)..<data.count)
         
         let uuid = UUID(uuid: icmpHeader.payload)
         guard uuid == fingerprint else {
@@ -585,7 +676,7 @@ public class SwiftyPing: NSObject {
             return false
         }
 
-        let checksum = try computeChecksum(header: icmpHeader)
+        let checksum = try computeChecksum(header: icmpHeader, additionalPayload: [UInt8](payload))
         
         guard icmpHeader.checksum == checksum else {
             throw PingError.checksumMismatch(received: icmpHeader.checksum, calculated: checksum)
@@ -601,50 +692,54 @@ public class SwiftyPing: NSObject {
         }
         let receivedSequenceIndex = CFSwapInt16BigToHost(icmpHeader.sequenceNumber)
         guard receivedSequenceIndex == sequenceIndex else {
-            throw PingError.invalidSequenceIndex(received: Int(receivedSequenceIndex), expected: sequenceIndex)
+            if erroredIndices.contains(Int(receivedSequenceIndex)) {
+                // This response either errorred or timed out, ignore it
+                return false
+            }
+            throw PingError.invalidSequenceIndex(received: receivedSequenceIndex, expected: sequenceIndex)
         }
         return true
     }
 
 }
 
-    // MARK: ICMP
+// MARK: ICMP
 
-    /// Format of IPv4 header
-    public struct IPHeader {
-        var versionAndHeaderLength: UInt8
-        var differentiatedServices: UInt8
-        var totalLength: UInt16
-        var identification: UInt16
-        var flagsAndFragmentOffset: UInt16
-        var timeToLive: UInt8
-        var `protocol`: UInt8
-        var headerChecksum: UInt16
-        var sourceAddress: (UInt8, UInt8, UInt8, UInt8)
-        var destinationAddress: (UInt8, UInt8, UInt8, UInt8)
-    }
+/// Format of IPv4 header
+public struct IPHeader {
+    public var versionAndHeaderLength: UInt8
+    public var differentiatedServices: UInt8
+    public var totalLength: UInt16
+    public var identification: UInt16
+    public var flagsAndFragmentOffset: UInt16
+    public var timeToLive: UInt8
+    public var `protocol`: UInt8
+    public var headerChecksum: UInt16
+    public var sourceAddress: (UInt8, UInt8, UInt8, UInt8)
+    public var destinationAddress: (UInt8, UInt8, UInt8, UInt8)
+}
 
-    /// ICMP header structure
-    private struct ICMPHeader {
-        /// Type of message
-        var type: UInt8
-        /// Type sub code
-        var code: UInt8
-        /// One's complement checksum of struct
-        var checksum: UInt16
-        /// Identifier
-        var identifier: UInt16
-        /// Sequence number
-        var sequenceNumber: UInt16
-        /// UUID payload
-        var payload: uuid_t
-    }
+/// ICMP header structure
+private struct ICMPHeader {
+    /// Type of message
+    var type: UInt8
+    /// Type sub code
+    var code: UInt8
+    /// One's complement checksum of struct
+    var checksum: UInt16
+    /// Identifier
+    var identifier: UInt16
+    /// Sequence number
+    var sequenceNumber: UInt16
+    /// UUID payload
+    var payload: uuid_t
+}
 
-    /// ICMP echo types
-    public enum ICMPType: UInt8 {
-        case EchoReply = 0
-        case EchoRequest = 8
-    }
+/// ICMP echo types
+public enum ICMPType: UInt8 {
+    case EchoReply = 0
+    case EchoRequest = 8
+}
 
 // MARK: - Helpers
 
@@ -655,9 +750,14 @@ public struct PingResponse {
     /// The IP address of the host.
     public let ipAddress: String?
     /// Running sequence number, starting from 0.
-    public let sequenceNumber: Int
+    /// This number will wrap to zero when it exceeds `UInt16.max`,
+    /// which is usually just 65535, and is the one used in the ping
+    /// protocol. See `trueSequenceNumber` for the actual count.
+    public let sequenceNumber: UInt16
+    /// The true sequence number.
+    public let trueSequenceNumber: UInt64
     /// Roundtrip time.
-    public let duration: TimeInterval?
+    public let duration: TimeInterval
     /// An error associated with the response.
     public let error: PingError?
     /// Response data packet size in bytes.
@@ -665,15 +765,49 @@ public struct PingResponse {
     /// Response IP header.
     public let ipHeader: IPHeader?
 }
+/// A struct encapsulating the results of a ping instance.
+public struct PingResult {
+    /// A struct encapsulating the roundtrip statistics.
+    public struct Roundtrip {
+        /// The smallest roundtrip time.
+        public let minimum: Double
+        /// The largest roundtrip time.
+        public let maximum: Double
+        /// The average (mean) roundtrip time.
+        public let average: Double
+        /// The standard deviation of the roundtrip times.
+        /// - Note: Standard deviation is calculated without Bessel's correction and thus gives zero if only one packet is received.
+        public let standardDeviation: Double
+    }
+    /// Collection of all responses, including errored or timed out.
+    public let responses: [PingResponse]
+    /// Number of packets sent.
+    public let packetsTransmitted: UInt64
+    /// Number of packets received.
+    public let packetsReceived: UInt64
+    /// The packet loss. If the number of packets transmitted (`packetsTransmitted`) is zero, returns `nil`.
+    public var packetLoss: Double? {
+        if packetsTransmitted == 0 { return nil }
+        return 1 - Double(packetsReceived) / Double(packetsTransmitted)
+    }
+    /// Roundtrip statistics, including min, max, average and stddev.
+    public let roundtrip: Roundtrip?
+}
 /// Controls pinging behaviour.
 public struct PingConfiguration {
     /// The time between consecutive pings in seconds.
-    let pingInterval: TimeInterval
+    public let pingInterval: TimeInterval
     /// Timeout interval in seconds.
-    let timeoutInterval: TimeInterval
+    public let timeoutInterval: TimeInterval
     /// If `true`, then `SwiftyPing` will automatically halt and restart the pinging when the app state changes. Only applicable on iOS. If `false`, then the user is responsible for appropriately handling app state changes, see issue #15 on GitHub.
-    var handleBackgroundTransitions = true
-    
+    public var handleBackgroundTransitions = true
+    /// Sets the TTL flag on the socket. All requests sent from the socket will include the TTL field set to this value.
+    public var timeToLive: Int?
+    /// Payload size in bytes. The payload always includes a fingerprint, and a payload size smaller than the fingerprint is ignored. By default, only the fingerprint is included in the payload.
+    public var payloadSize: Int = MemoryLayout<uuid_t>.size
+    /// If set to `true`, when `targetCount` is reached (if set), the pinging will be halted instead of stopped. This means that the socket will be released and will be recreated if more pings are requested. Defaults to `true`.
+    public var haltAfterTarget: Bool = true
+
     /// Initializes a `PingConfiguration` object with the given parameters.
     /// - Parameter interval: The time between consecutive pings in seconds. Defaults to 1.
     /// - Parameter timeout: Timeout interval in seconds. Defaults to 5.

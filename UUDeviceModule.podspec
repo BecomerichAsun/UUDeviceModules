@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UUDeviceModule'
-  s.version          = '1.2.2'
+  s.version          = '1.2.3'
   s.summary          = 'A short description of UUDeviceModule.'
 
 
@@ -28,4 +28,5 @@ Pod::Spec.new do |s|
   s.framework = 'UIKit', 'AVFoundation'
   s.dependency 'SnapKit','~> 5.0.0'
   s.dependency 'SVGAPlayer', '2.3.5'
+  
 end
